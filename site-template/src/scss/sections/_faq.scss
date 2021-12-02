@@ -1,0 +1,46 @@
+@use "../custom"as *;
+
+#faq {
+    padding-top: 15vh;
+
+    .heading-line {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #faq-accordion {
+        width: 80%;
+        margin: 2rem auto;
+        max-width: 800px;
+
+        .accordion-item {
+            border-radius: 8px !important;
+            margin-bottom: 3rem;
+            box-shadow: 10px 10px 10px $secondary;
+            background-color: $white;
+            opacity: 1 !important;
+        }
+
+        .accordion-button {
+            font-size: 1.20rem;
+            font-weight: 600;
+            border-bottom: 1px solid $primary;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+
+
+        .accordion-body {
+            background-color: rgba($white, 1);
+            text-align: left;
+        }
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+
+    }
+}
