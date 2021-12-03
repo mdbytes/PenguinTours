@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 
-import portfolioOne from "../images/portfolio/portfolio-1.jpg";
-import portfolioTwo from "../images/portfolio/portfolio-2.jpg";
-import portfolioThree from "../images/portfolio/portfolio-3.jpg";
-import portfolioFour from "../images/portfolio/portfolio-4.jpg";
-import portfolioFive from "../images/portfolio/portfolio-5.jpg";
-import portfolioSix from "../images/portfolio/portfolio-6.jpg";
-import portfolioSeven from "../images/portfolio/portfolio-7.jpg";
-import portfolioEight from "../images/portfolio/portfolio-8.jpg";
-import portfolioNine from "../images/portfolio/portfolio-9.jpg";
+import portfolioOne from "../images/portfolio/p01.jpeg";
+import portfolioTwo from "../images/portfolio/p02.jpeg";
+import portfolioThree from "../images/portfolio/p03.JPG";
+import portfolioFour from "../images/portfolio/p04.jpeg";
+import portfolioFive from "../images/portfolio/p05.jpeg";
+import portfolioSix from "../images/portfolio/p06.JPG";
+import portfolioSeven from "../images/portfolio/p07.png";
+import portfolioEight from "../images/portfolio/p08.png";
+import portfolioNine from "../images/portfolio/p09.png";
+import portfolioTen from "../images/portfolio/p10.jpeg";
 
 import logoPort from "../images/logo2sm.png";
 
@@ -24,9 +25,12 @@ class PortfolioPage extends Component {
               <img src={logoPort} alt="logo" />
             </h1>
             <div className="heading-line"></div>
-            <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Necessitatibus cum quam deleniti!
+            <p className="lead">Here's a little of what's been going on...</p>
+            <p class="mobilePresent">
+              Tap on any image for additional details.
+            </p>
+            <p class="largePresent">
+              Hover over any image for additional details.
             </p>
           </div>
           <div className="row text-center mt-5 mb-4 g-3">
@@ -38,22 +42,12 @@ class PortfolioPage extends Component {
                 Websites
               </button>
               <button className="btn btn-outline-primary" type="button">
-                Design
-              </button>
-              <button className="btn btn-outline-primary" type="button">
-                Mockup
-              </button>
-              <button
-                id="detailView"
-                className="btn btn-outline-primary"
-                type="button"
-              >
-                View Details
+                Web Applications
               </button>
             </div>
             <div className="row">
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioOne}
                     alt="portfolio 1 picture"
@@ -62,15 +56,25 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 1</h4>
-                      <p>category project</p>
+                      <h4>Feedback Focus</h4>
+                      <p>Email Survey Automation</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a
+                          href="https://customer-email-response-app.herokuapp.com/"
+                          target="_blank"
+                        >
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioTwo}
                     alt="portfolio 2 picture"
@@ -79,14 +83,21 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 2</h4>
-                      <p>category project</p>
+                      <h4>Careers</h4>
+                      <p>Employment Application</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a href="http://careers.mdbytes.us/" target="_blank">
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioThree}
                     alt="portfolio 3 picture"
@@ -95,14 +106,21 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 3</h4>
-                      <p>category project</p>
+                      <h4>Juntos</h4>
+                      <p>Social Media Site</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a href="http://juntos.mdbytes.us/" target="_blank">
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioFour}
                     alt="portfolio 4 picture"
@@ -111,14 +129,21 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 4</h4>
-                      <p>category project</p>
+                      <h4>Wild Things Nature Photography</h4>
+                      <p>A WordPress Original Theme</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a href="http://gowildthings.com" target="_blank">
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioFive}
                     alt="portfolio 5 picture"
@@ -127,14 +152,24 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 5</h4>
-                      <p>category project</p>
+                      <h4>Vidly Video</h4>
+                      <p>Video Streaming Service Front End</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a
+                          href="http://vidly001-dev.us-east-2.elasticbeanstalk.com/"
+                          target="_blank"
+                        >
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioSix}
                     alt="portfolio 6 picture"
@@ -143,14 +178,23 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 6</h4>
-                      <p>category project</p>
+                      <h4>
+                        <span class="logo-style">md</span> Bytes Blog
+                      </h4>
+                      <p>An Open Source Blog Project</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a href="http://blog.mdbytes.us" target="_blank">
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box ">
                   <img
                     src={portfolioSeven}
                     alt="portfolio 7 picture"
@@ -159,14 +203,24 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 7</h4>
-                      <p>category project</p>
+                      <h4>ChatApp</h4>
+                      <p>Secure Instant Messaaging</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a
+                          href="https://mdbytes-chat-app.herokuapp.com/"
+                          target="_blank"
+                        >
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioEight}
                     alt="portfolio 8 picture"
@@ -175,14 +229,21 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 8</h4>
-                      <p>category project</p>
+                      <h4>MIREFA</h4>
+                      <p>Ministry Site in Spanish</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a href="https://mirefa.org" target="_blank">
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="portfolio-box shadow">
+              <div className="col-lg-6">
+                <div className="portfolio-box">
                   <img
                     src={portfolioNine}
                     alt="portfolio 9 picture"
@@ -191,8 +252,38 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>project name goes here 9</h4>
-                      <p>category project</p>
+                      <h4>The Bird</h4>
+                      <p>Responsive Social Media Site</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a href="https://bird.mdbytes.us" target="_blank">
+                          online
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="portfolio-box">
+                  <img
+                    src={portfolioTen}
+                    alt="portfolio 9 picture"
+                    title="portfolio 9 picture"
+                    className="img-fluid"
+                  />
+                  <div className="portfolio-info">
+                    <div className="caption">
+                      <h4>Primal Strength</h4>
+                      <p>Another WordPress Original Theme</p>
+                      <p>
+                        Visit:
+                        <br />{" "}
+                        <a href="https://goprimalstrength.com" target="_blank">
+                          online
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>

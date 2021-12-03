@@ -3,7 +3,18 @@ import React, { Component } from "react";
 import logoCon from "../images/logo2sm.png";
 
 class ContactPage extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  state = {
+    timesRun: 0,
+  };
+
   componentDidMount() {}
+
+  componentWillUnmount() {}
+
   render() {
     return (
       <section id="contact" className="get-started">

@@ -1,11 +1,32 @@
 @use '../custom'as *;
 @use '../components/mixins';
 
+
+
 .services {
     position: relative;
     padding: 1rem 0;
     padding-top: 15vh;
     padding-bottom: 3rem;
+
+    .services-column {
+        margin: 4rem auto;
+
+        &.right-content {
+            display: none;
+
+            @include media-breakpoint-up(md) {
+                display: flex;
+            }
+
+        }
+
+        &.left-content {
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+    }
 
     .service-item {
         padding: .5em 0 .5em 1em;
@@ -23,10 +44,15 @@
         border: 1px solid $primary;
         border-radius: 8px;
         box-shadow: 8px 8px 8px $primary;
+        height: auto;
 
         h3 {
             margin-top: 2rem;
             margin-bottom: 2rem;
+
+            @include media-breakpoint-down(md) {
+                font-size: 150%;
+            }
         }
 
 
@@ -35,11 +61,11 @@
             text-align: left;
         }
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
             margin-top: 5rem;
         }
 
-        button {
+        a {
             background-color: $secondary;
             border: 1px solid $secondary !important;
             color: $white;
@@ -62,7 +88,7 @@
     &__pic {
         img {
             display: block;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
         }
     }

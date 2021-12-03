@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+
 import penny from "../images/logo2sm.png";
 
 class Footer extends Component {
@@ -122,8 +124,8 @@ class Footer extends Component {
             </div>
           </div>
 
-          <div className="container mt-5">
-            <div className="row text-white justify-content-center mt-3 pb-3">
+          <div className="container footer-middle">
+            <div className="row text-white justify-content-center ">
               <div className="col-12 col-sm-4 col-lg-4">
                 <div className="footer-sm">
                   <h5 className="text-capitalize fw-bold">
@@ -175,41 +177,22 @@ class Footer extends Component {
                   </div>
                 </div>
               </div>
-              <div
-                id="mascot-container"
-                className="col-12 col-sm-4 col-lg-4 mb-4"
-              >
-                <h5 className="text-capitalize fw-bold"> </h5>
+              <div id="mascot-container" className="col-12 col-sm-4 col-lg-4">
+                <h5 className="text-capitalize fw-bold">Our Mascot</h5>
                 <br />
                 <img src={penny} alt="Baby Tux" className="img-fluid" />
 
                 <p>Baby Tux</p>
               </div>
 
-              <div id="site-menu" className="col-12 col-sm-4 col-lg-4 mb-4">
+              <div id="site-menu" className="col-12 col-sm-4 col-lg-4">
                 <h5 className="text-capitalize fw-bold">Quick Links</h5>
                 <div id="quick-links">
-                  <a
-                    href="https://www.lipsum.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="https://www.lipsum.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Services
-                  </a>
-                  <a
-                    href="https://www.lipsum.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Contact
-                  </a>
+                  <NavLink to="/">Home</NavLink>
+                  <span>|</span>
+                  <NavLink to="/services">Services</NavLink>
+                  <span>|</span>
+                  <NavLink to="/contact">Contact</NavLink>
                 </div>
               </div>
             </div>
@@ -234,8 +217,8 @@ class Footer extends Component {
                   <div className="footer-bottom__copyright">
                     <br />
                     <p className="attribution">
-                      Photos for this site were used without attribution
-                      <br /> under either{" "}
+                      Photos for this site were used without attribution under
+                      either{" "}
                       <a
                         href="https://pixabay.com/service/license/"
                         alt="pixabay"

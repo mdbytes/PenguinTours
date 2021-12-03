@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 import imageOne from "../images/services/UI_design _Isometric.png";
 import imageTwo from "../images/services/Code_Development _Isometric.png";
@@ -9,13 +10,13 @@ import logoSvc from "../images/logo2sm.png";
 class ServicesPage extends Component {
   constructor(props) {
     super(props);
-    this.buttonClick = this.buttonClick.bind(this);
+    // this.buttonClick = this.buttonClick.bind(this);
   }
-  componentDidMount() {}
 
-  buttonClick = () => {
-    document.querySelector("#contactLink").click();
-  };
+  // buttonClick = (evt) => {
+  //   evt.preventDefault();
+  //   window.location("https://template.mdbytes.us/contact");
+  // };
 
   render() {
     return (
@@ -79,7 +80,7 @@ class ServicesPage extends Component {
           </div>
 
           <div className="row">
-            <div className="col-md-6 col-sm-12 col-xs-12 services mt-2">
+            <div className="col-md-6 col-sm-12 col-xs-12 services-column">
               <div className="services__content">
                 <div className="icon fas fa-paper-plane d-block"></div>
                 <h3 className="display-3--title">UI Design</h3>
@@ -89,8 +90,8 @@ class ServicesPage extends Component {
                   aspernatur doloremque libero laborum? Accusamus quae, eos
                   excepturi porro quia alias magni!
                 </p>
-                <button
-                  onClick={this.buttonClick}
+                <NavLink
+                  to="/contact"
                   type="button"
                   className="rounded-pill btn-rounded border-primary"
                 >
@@ -98,10 +99,10 @@ class ServicesPage extends Component {
                   <span>
                     <i className="bi bi-arrow-right"></i>
                   </span>
-                </button>
+                </NavLink>
               </div>
             </div>
-            <div className="col-md-6 col-sm-12 col-xs-12 services mt-2">
+            <div className="col-md-6 col-sm-12 col-xs-12  services-column">
               <div className="services__pic">
                 <img src={imageOne} alt="UI Design" className="img-fluid" />
               </div>
@@ -109,17 +110,8 @@ class ServicesPage extends Component {
           </div>
 
           <div className="row">
-            <div className="col-md-6 col-sm-12 col-xs-12 services mt-2">
-              <div className="services__pic">
-                <img
-                  src={imageTwo}
-                  alt="web development"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-            <div className="col-md-6 col-sm-12 col-xs-12 services mt-2">
-              <div className="services__content">
+            <div className="col-md-6 col-sm-12 col-xs-12  services-column left-content">
+              <div className="services__content ">
                 <div className="icon fas fa-code d-block"></div>
                 <h3 className="display-3--title">Web Development</h3>
                 <p className="lh-lg">
@@ -128,8 +120,8 @@ class ServicesPage extends Component {
                   aspernatur doloremque libero laborum? Accusamus quae, eos
                   excepturi porro quia alias magni!
                 </p>
-                <button
-                  onClick={this.buttonClick}
+                <NavLink
+                  to="/contact"
                   type="button"
                   className="rounded-pill btn-rounded border-primary"
                 >
@@ -137,13 +129,44 @@ class ServicesPage extends Component {
                   <span>
                     <i className="bi bi-arrow-right"></i>
                   </span>
-                </button>
+                </NavLink>
+              </div>
+            </div>
+            <div className="col-md-6 col-sm-12 col-xs-12  services-column">
+              <div className="services__pic">
+                <img
+                  src={imageTwo}
+                  alt="web development"
+                  className="img-fluid"
+                />
+              </div>
+            </div>
+            <div className="col-md-6 col-sm-12 col-xs-12  services-column right-content">
+              <div className="services__content ">
+                <div className="icon fas fa-code d-block"></div>
+                <h3 className="display-3--title">Web Development</h3>
+                <p className="lh-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime consequatur placeat numquam voluptate a, dicta corrupti
+                  aspernatur doloremque libero laborum? Accusamus quae, eos
+                  excepturi porro quia alias magni!
+                </p>
+                <NavLink
+                  to="/contact"
+                  type="button"
+                  className="rounded-pill btn-rounded border-primary"
+                >
+                  Learn More
+                  <span>
+                    <i className="bi bi-arrow-right"></i>
+                  </span>
+                </NavLink>
               </div>
             </div>
           </div>
 
           <div className="row">
-            <div className="col-md-6 col-sm-12 col-xs-12 services mt-2">
+            <div className="col-md-6 col-sm-12 col-xs-12  services-column">
               <div className="services__content">
                 <div className="icon fas fa-cloud-upload-alt d-block"></div>
                 <h3 className="display-3--title">Deployment</h3>
@@ -153,8 +176,8 @@ class ServicesPage extends Component {
                   aspernatur doloremque libero laborum? Accusamus quae, eos
                   excepturi porro quia alias magni!
                 </p>
-                <button
-                  onClick={this.buttonClick}
+                <NavLink
+                  to="/contact"
                   type="button"
                   className="rounded-pill btn-rounded border-primary"
                 >
@@ -162,10 +185,10 @@ class ServicesPage extends Component {
                   <span>
                     <i className="bi bi-arrow-right"></i>
                   </span>
-                </button>
+                </NavLink>
               </div>
             </div>
-            <div className="col-md-6 col-sm-12 col-xs-12 services mt-2">
+            <div className="col-md-6 col-sm-12 col-xs-12  services-column">
               <div className="services__pic">
                 <img src={imageThree} alt="cloud" className="img-fluid" />
               </div>

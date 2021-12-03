@@ -4,55 +4,24 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/logo2sm.png";
 
 class NavBar extends Component {
-  componentDidMount() {
-    const navToggleLink = document.querySelector("#navToggler");
-    const homeLink = document.querySelector("#homeLink");
-    const servicesLink = document.querySelector("#servicesLink");
-    const testimonialsLink = document.querySelector("#testimonialsLink");
-    const faqLink = document.querySelector("#faqLink");
-    const portfolioLink = document.querySelector("#portfolioLink");
-    const contactLink = document.querySelector("#contactLink");
-
-    const navToggler = document.querySelector("#navToggler");
-
-    homeLink.addEventListener("click", () => {
-      console.log("nav link clicked");
-      navToggler.click();
-    });
-
-    servicesLink.addEventListener("click", () => {
-      console.log("nav link clicked");
-      navToggler.click();
-    });
-
-    testimonialsLink.addEventListener("click", () => {
-      console.log("nav link clicked");
-      navToggler.click();
-    });
-
-    faqLink.addEventListener("click", () => {
-      console.log("nav link clicked");
-      navToggler.click();
-    });
-
-    portfolioLink.addEventListener("click", () => {
-      console.log("nav link clicked");
-      navToggler.click();
-    });
-
-    contactLink.addEventListener("click", () => {
-      console.log("nav link clicked");
-      navToggler.click();
-    });
+  constructor(props) {
+    super(props);
+    this.navClick = this.navClick.bind(this);
   }
+
+  navClick = () => {
+    document.querySelector("#navToggler").click();
+  };
+
+  componentDidMount() {}
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
           <div className="container">
-            <a className="navbar-brand d-flex align-items-end" href="/">
+            <NavLink className="navbar-brand d-flex align-items-end" to="/">
               <img src={logo} alt="logo" />
-            </a>
+            </NavLink>
             <button
               id="navToggler"
               className="navbar-toggler"
@@ -71,7 +40,12 @@ class NavBar extends Component {
             >
               <ul className="navbar-nav">
                 <li className="nav-item d-flex align-items-center ">
-                  <NavLink id="homeLink" className="nav-link" to="/">
+                  <NavLink
+                    id="homeLink"
+                    className="nav-link"
+                    to="/"
+                    onClick={this.navClick}
+                  >
                     Home
                   </NavLink>
                 </li>
@@ -80,6 +54,7 @@ class NavBar extends Component {
                     id="servicesLink"
                     className="nav-link"
                     to="/services"
+                    onClick={this.navClick}
                   >
                     Services
                   </NavLink>
@@ -89,12 +64,18 @@ class NavBar extends Component {
                     id="testimonialsLink"
                     className="nav-link"
                     to="/testimonials"
+                    onClick={this.navClick}
                   >
                     Testimonials
                   </NavLink>
                 </li>
                 <li className="nav-item d-flex align-items-center ">
-                  <NavLink id="faqLink" className="nav-link" to="/faq">
+                  <NavLink
+                    id="faqLink"
+                    className="nav-link"
+                    to="/faq"
+                    onClick={this.navClick}
+                  >
                     Faq
                   </NavLink>
                 </li>
@@ -103,12 +84,18 @@ class NavBar extends Component {
                     id="portfolioLink"
                     className="nav-link"
                     to="/portfolio"
+                    onClick={this.navClick}
                   >
                     Portfolio
                   </NavLink>
                 </li>
                 <li className="nav-item d-flex align-items-center ">
-                  <NavLink id="contactLink" className="nav-link" to="/contact">
+                  <NavLink
+                    id="contactLink"
+                    className="nav-link"
+                    to="/contact"
+                    onClick={this.navClick}
+                  >
                     Contact
                   </NavLink>
                 </li>

@@ -9,6 +9,14 @@
 
 }
 
+.logo-style {
+    font-family: "MuseoModerno", cursive;
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.1em;
+    color: #ff6a00;
+}
+
 .display-2 {
     margin: 1rem 0;
     text-transform: capitalize;
@@ -92,7 +100,7 @@
         font-weight: 600;
         font-family: 'Poppins', sans-serif;
         display: inline-block;
-        background-image: linear-gradient(to right, $primary, $secondary);
+        @include gradient;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
