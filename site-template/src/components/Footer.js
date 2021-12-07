@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import penny from "../images/logo2sm.png";
+import penny from "../images/logo.png";
 
 class Footer extends Component {
   constructor(props) {
     super(props);
-
+    this.companyName = "Penguin Tours, Ltd.";
     this.backToTop = this.backToTop.bind(this);
   }
 
@@ -128,9 +128,7 @@ class Footer extends Component {
             <div className="row text-white justify-content-center ">
               <div className="col-12 col-sm-4 col-lg-4">
                 <div className="footer-sm">
-                  <h5 className="text-capitalize fw-bold">
-                    Social Media Links
-                  </h5>
+                  <h5 className="">Social Media Links</h5>
                   <p>Visit Today</p>
 
                   <div id="social-icons" className="row ">
@@ -178,15 +176,18 @@ class Footer extends Component {
                 </div>
               </div>
               <div id="mascot-container" className="col-12 col-sm-4 col-lg-4">
-                <h5 className="text-capitalize fw-bold">Our Mascot</h5>
+                <h5 className="">Penguin Tours, Ltd.</h5>
                 <br />
                 <img src={penny} alt="Baby Tux" className="img-fluid" />
 
-                <p>Baby Tux</p>
+                <p>
+                  Connecting People <br />
+                  and Penguins
+                </p>
               </div>
 
               <div id="site-menu" className="col-12 col-sm-4 col-lg-4">
-                <h5 className="text-capitalize fw-bold">Quick Links</h5>
+                <h5>Quick Links</h5>
                 <div id="quick-links">
                   <NavLink to="/">Home</NavLink>
                   <span>|</span>
@@ -203,7 +204,7 @@ class Footer extends Component {
               <div className="row text-center text-white">
                 <div className="col-12">
                   <div className="footer-bottom__copyright">
-                    &copy; Copyright 2021 Your Company | Created by{" "}
+                    &copy; Copyright 2021 {this.companyName} | Created by{" "}
                     <a
                       href="https:/mdbytes.com"
                       target="_blank"

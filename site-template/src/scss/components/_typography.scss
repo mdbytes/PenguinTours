@@ -1,12 +1,19 @@
-@use '../custom'as *;
-@use 'mixins'as *;
+@use "../custom"as *;
+@use "mixins"as *;
+
+body {
+    @include baseFont;
+}
+
+.App {
+    @include backgroundImage;
+}
 
 .attribution {
     text-align: center;
     font-size: 1rem;
     color: $white;
     margin-top: 10px;
-
 }
 
 .logo-style {
@@ -20,13 +27,13 @@
 .display-2 {
     margin: 1rem 0;
     text-transform: capitalize;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 
     &--intro {
         display: inline-block;
         font-weight: 700;
         color: $white;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
     }
 
     &--description {
@@ -50,9 +57,8 @@
             font-weight: 800;
             color: $gray-500;
             letter-spacing: -0.05em;
-            padding-left: .1rem;
+            padding-left: 0.1rem;
         }
-
 
         @include media-breakpoint-up(lg) {
             font-size: 1.5rem;
@@ -68,37 +74,37 @@
 .heading-line::before {
     content: "";
     width: 10rem;
-    height: 0.1rem;
+    height: 0.25rem;
     display: block;
     margin: 0 auto;
-    background-color: $primary;
-
+    background-color: $white;
 }
 
 .heading-line::after {
     content: "";
     width: 5rem;
     height: 0.2rem;
-    padding-top: 0.5rem;
+    padding-top: 0.35rem;
     display: block;
     margin: 0 auto;
-    background-color: $primary;
-
+    background-color: $white;
+    margin-bottom: 2rem;
 }
 
 .display-3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 
     img {
         padding-left: 1rem;
-        height: 5rem;
+        height: 4rem;
     }
 
     &--title {
         font-size: 1.2rem;
+
         text-transform: capitalize;
         font-weight: 600;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         display: inline-block;
         @include gradient;
         background-clip: text;
@@ -116,15 +122,12 @@
     height: 100%;
 }
 
-.gslide-desc {
-    display: block;
-    width: 70%;
-    margin: 0 auto;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+.goverlay {
+    opacity: 0.5;
+}
 
-    a {
-        color: blue;
-
-    }
+#glightbox-body>div.gcontainer>button.gclose.gbtn,
+button.gprev.gbtn,
+button.gnext.gbtn {
+    background-color: $secondary;
 }

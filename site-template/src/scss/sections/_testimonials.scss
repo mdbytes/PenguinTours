@@ -1,11 +1,10 @@
-@use '../custom'as *;
-@use '../components/mixins'as *;
+@use "../custom"as *;
+@use "../components/mixins"as *;
 
 .testimonials {
     position: relative;
     padding: 0;
     padding-bottom: 4rem;
-    @include gradient;
 
     #testimonials-bookmark {
         padding-top: 12vh;
@@ -28,7 +27,6 @@
         }
 
         .ratings {
-
             i {
                 color: rgba($primary, 0.7);
                 font-size: 1rem;
@@ -39,7 +37,6 @@
     }
 
     &__picture {
-
         width: 6rem;
         height: 6rem;
         padding-top: 1.5rem;
@@ -48,7 +45,6 @@
         transform: translate(-50%, -50%);
 
         img {
-
             border: 0.325rem solid rgba($primary, 0.7);
         }
     }
@@ -73,16 +69,25 @@
 
     #carouselExampleCaptions>div button {
         width: 6rem !important;
-        margin: .5rem !important;
+        margin: 0.5rem !important;
+        background-color: $white;
+        border: none;
 
         i {
+            color: $primary;
             font-size: 1.5rem;
         }
 
+        &:hover {
+            @include gradient;
+
+            i {
+                color: $white;
+            }
+        }
     }
 
     svg {
         position: relative;
-
     }
 }

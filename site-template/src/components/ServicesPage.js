@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import imageOne from "../images/services/UI_design _Isometric.png";
-import imageTwo from "../images/services/Code_Development _Isometric.png";
-import imageThree from "../images/services/Data_storage_Isometric.png";
+import imageOne from "../images/services/services-1.png";
+import imageTwo from "../images/services/services-2.png";
+import imageThree from "../images/services/services-3.png";
 
-import logoSvc from "../images/logo2sm.png";
+import logoSvc from "../images/logo.png";
 
 class ServicesPage extends Component {
   constructor(props) {
     super(props);
-    // this.buttonClick = this.buttonClick.bind(this);
   }
 
-  // buttonClick = (evt) => {
-  //   evt.preventDefault();
-  //   window.location("https://template.mdbytes.us/contact");
-  // };
+  componentDidMount() {
+    document.querySelector("#homeLink").classList.remove("active");
+  }
 
   render() {
     return (
@@ -32,7 +30,7 @@ class ServicesPage extends Component {
 
           <div className="row pt-2 mt-1 mb1">
             <div className="col-md-6 border-right">
-              <div className="bg-white p-3">
+              <div className="service-items p-3">
                 <h4 className="">
                   <br />
                   <div>
@@ -41,65 +39,62 @@ class ServicesPage extends Component {
                         <i className="bi bi-check"></i>
                       </div>
                       <div className="col-11">
-                        Designing user friendly applications
+                        Year round tours of the Antarctic
                       </div>
                     </div>
                     <div className="service-item row">
                       <div className="col-1">
                         <i className="bi bi-check"></i>
                       </div>
-                      <div className="col-11">Developing code efficiently</div>
+                      <div className="col-11">
+                        Close up encounters with penguins
+                      </div>
                     </div>
 
                     <div className="service-item row">
                       <div className="col-1">
                         <i className="bi bi-check"></i>
                       </div>
-                      <div className="col-11">
-                        Deploying to a broad range of internet infrastructures
-                      </div>
+                      <div className="col-11">Comfortable accommodations</div>
                     </div>
                   </div>
                 </h4>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="bg-white p-4 text-start">
+              <div className="services-overview p-4 text-start">
                 <p className="fw-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Penguin Tours, Ltd. is a ficticious company invented to
+                  demonstrate functionality and adaptability of a website
+                  template. But if we existed, we would provide year round tours
+                  of the Antarctic, by boat and by foot, including breathtaking
+                  encounters with penguins and comfortable accommodations.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="row">
+          <div className="row service-item-row">
             <div className="col-md-6 col-sm-12 col-xs-12 services-column">
               <div className="services__content">
                 <div className="icon fas fa-paper-plane d-block"></div>
-                <h3 className="display-3--title">UI Design</h3>
+                <h3 className="display-3--title">Antarctic Tours</h3>
                 <p className="lh-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime consequatur placeat numquam voluptate a, dicta corrupti
-                  aspernatur doloremque libero laborum? Accusamus quae, eos
-                  excepturi porro quia alias magni!
+                  We are constantly striving for new and exciting ways to tour
+                  the exciting Antarctic, whether by boat, vehicle, or on foot.
                 </p>
-                <NavLink
-                  to="/contact"
-                  type="button"
-                  className="rounded-pill btn-rounded border-primary"
-                >
-                  Learn More
-                  <span>
-                    <i className="bi bi-arrow-right"></i>
-                  </span>
-                </NavLink>
+                <div class="learn-btn">
+                  <NavLink
+                    to="/contact"
+                    type="button"
+                    className="rounded-pill btn-rounded border-primary"
+                  >
+                    Learn More
+                    <span>
+                      <i className="bi bi-envelope-fill"></i>
+                    </span>
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div className="col-md-6 col-sm-12 col-xs-12  services-column">
@@ -109,27 +104,27 @@ class ServicesPage extends Component {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row  service-item-row">
             <div className="col-md-6 col-sm-12 col-xs-12  services-column left-content">
               <div className="services__content ">
                 <div className="icon fas fa-code d-block"></div>
-                <h3 className="display-3--title">Web Development</h3>
+                <h3 className="display-3--title">Penguin Encounters</h3>
                 <p className="lh-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime consequatur placeat numquam voluptate a, dicta corrupti
-                  aspernatur doloremque libero laborum? Accusamus quae, eos
-                  excepturi porro quia alias magni!
+                  A primary goal of our tours is to introduce visitors to the
+                  most popular and amazing bird on the planet, i.e. the penguin.{" "}
                 </p>
-                <NavLink
-                  to="/contact"
-                  type="button"
-                  className="rounded-pill btn-rounded border-primary"
-                >
-                  Learn More
-                  <span>
-                    <i className="bi bi-arrow-right"></i>
-                  </span>
-                </NavLink>
+                <div class="learn-btn">
+                  <NavLink
+                    to="/contact"
+                    type="button"
+                    className="rounded-pill btn-rounded border-primary"
+                  >
+                    Learn More
+                    <span>
+                      <i className="bi bi-envelope-fill"></i>
+                    </span>
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div className="col-md-6 col-sm-12 col-xs-12  services-column">
@@ -144,48 +139,49 @@ class ServicesPage extends Component {
             <div className="col-md-6 col-sm-12 col-xs-12  services-column right-content">
               <div className="services__content ">
                 <div className="icon fas fa-code d-block"></div>
-                <h3 className="display-3--title">Web Development</h3>
+                <h3 className="display-3--title">Penguin Encounters</h3>
                 <p className="lh-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime consequatur placeat numquam voluptate a, dicta corrupti
-                  aspernatur doloremque libero laborum? Accusamus quae, eos
-                  excepturi porro quia alias magni!
+                  A primary goal of our tours is to introduce visitors to the
+                  most popular and amazing bird on the planet, i.e. the penguin.{" "}
                 </p>
-                <NavLink
-                  to="/contact"
-                  type="button"
-                  className="rounded-pill btn-rounded border-primary"
-                >
-                  Learn More
-                  <span>
-                    <i className="bi bi-arrow-right"></i>
-                  </span>
-                </NavLink>
+                <div class="learn-btn">
+                  <NavLink
+                    to="/contact"
+                    type="button"
+                    className="rounded-pill btn-rounded border-primary"
+                  >
+                    Learn More
+                    <span>
+                      <i className="bi bi-envelope-fill"></i>
+                    </span>
+                  </NavLink>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="row">
+          <div className="row  service-item-row">
             <div className="col-md-6 col-sm-12 col-xs-12  services-column">
               <div className="services__content">
                 <div className="icon fas fa-cloud-upload-alt d-block"></div>
-                <h3 className="display-3--title">Deployment</h3>
+                <h3 className="display-3--title">Accommodations</h3>
                 <p className="lh-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime consequatur placeat numquam voluptate a, dicta corrupti
-                  aspernatur doloremque libero laborum? Accusamus quae, eos
-                  excepturi porro quia alias magni!
+                  If we existed, which we do not, but if we did exist, we would
+                  no doubt have comfortable accommodations like this facility on
+                  the side of a mountain in the Antarctic.{" "}
                 </p>
-                <NavLink
-                  to="/contact"
-                  type="button"
-                  className="rounded-pill btn-rounded border-primary"
-                >
-                  Learn More
-                  <span>
-                    <i className="bi bi-arrow-right"></i>
-                  </span>
-                </NavLink>
+                <div class="learn-btn">
+                  <NavLink
+                    to="/contact"
+                    type="button"
+                    className="rounded-pill btn-rounded border-primary"
+                  >
+                    Learn More
+                    <span>
+                      <i className="bi bi-envelope-fill"></i>
+                    </span>
+                  </NavLink>
+                </div>
               </div>
             </div>
             <div className="col-md-6 col-sm-12 col-xs-12  services-column">

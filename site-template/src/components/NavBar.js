@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import logo from "../images/logo2sm.png";
+import logo from "../images/logo.png";
 
 class NavBar extends Component {
   constructor(props) {
@@ -9,18 +9,24 @@ class NavBar extends Component {
     this.navClick = this.navClick.bind(this);
   }
 
-  navClick = () => {
+  navClick = (evt) => {
     document.querySelector("#navToggler").click();
+    if (evt.target.getAttribute("id") !== "homeLink") {
+      document.querySelector("#homeLink").classList.remove("active");
+    } else {
+      document.querySelector("#homeLink").classList.add("active");
+    }
   };
 
   componentDidMount() {}
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark menu fixed-top">
           <div className="container">
             <NavLink className="navbar-brand d-flex align-items-end" to="/">
               <img src={logo} alt="logo" />
+              <span className="logo-font">Penguin Tours, Ltd.</span>
             </NavLink>
             <button
               id="navToggler"
@@ -86,7 +92,7 @@ class NavBar extends Component {
                     to="/portfolio"
                     onClick={this.navClick}
                   >
-                    Portfolio
+                    Gallery
                   </NavLink>
                 </li>
                 <li className="nav-item d-flex align-items-center ">

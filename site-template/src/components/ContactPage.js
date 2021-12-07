@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import logoCon from "../images/logo2sm.png";
+import logoCon from "../images/logo.png";
 
 class ContactPage extends Component {
   constructor(props) {
@@ -11,7 +11,9 @@ class ContactPage extends Component {
     timesRun: 0,
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    document.querySelector("#homeLink").classList.remove("active");
+  }
 
   componentWillUnmount() {}
 
@@ -32,11 +34,9 @@ class ContactPage extends Component {
           </div>
 
           <div className="row text-white">
-            <div className="col-12 col-lg-6 gradient shadow p-3">
+            <div className="col-12 col-lg-6 ">
               <div className="cta-info w-100">
-                <h4 className="display-4 fw-bold">
-                  100% Satisfaction Guaranteed
-                </h4>
+                <h4 className="display-4 fw-bold">Satisfaction Guaranteed</h4>
                 <p className="lh-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Officia quaerat eos vel totam fuga alias ea labore eius, quae
@@ -44,15 +44,17 @@ class ContactPage extends Component {
                 </p>
                 <h3 className="display-3--brief">What is the next step?</h3>
                 <ul className="cta-info__list">
+                  <li>Let us know you are interested</li>
                   <li>We'll prepare a proposal</li>
-                  <li>We'll discuss it together</li>
-                  <li>Let's get started</li>
+                  <li>
+                    We'll discuss the proposal and plan the trip of your dreams
+                  </li>
                 </ul>
               </div>
             </div>
-            <div className="col-12 col-lg-6 bg-white shadow p-3">
+            <div className="col-12 col-lg-6 ">
               <div className="form w-100 pb-2">
-                <h4 className="display-3--title mb-5">Start Your Project</h4>
+                <h4 className="display-3--title mb-5">Plan Your Tour</h4>
                 <form action="#" className="row">
                   <div className="col-lg-6 col-md-6 mb-3">
                     <input
@@ -80,7 +82,7 @@ class ContactPage extends Component {
                   </div>
                   <div className="col-lg-12 mb-3">
                     <textarea
-                      placeholder="Message"
+                      placeholder="Describe what you want to see, where you want to go.."
                       name="message"
                       id="message"
                       rows="8"

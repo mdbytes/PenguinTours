@@ -42,9 +42,8 @@ $purple-light: #bb6ef5;
 $pink: #d122e3;
 
 $bytes-orange: #ff6a00;
-$image-blue:$green;
-$image-light-blue: #8EA3FF;
-
+$image-blue: $green;
+$image-light-blue: #8ea3ff;
 
 $plum: #42275a;
 $plum-light: #9a6592;
@@ -52,11 +51,22 @@ $plum-light: #9a6592;
 $mauve-dark: #42275a;
 $mauve-light: #734b6d;
 
-$nav-background: #706695;
-$footer-background: #706695;
-$primary:#df825f;
-$secondary:#706695;
-$primary-light: #eaab95;
+$web-dev-primary: #df822f;
+$web-dev-primary-light: #eaab95;
+$web-dev-secondary: #706695;
+
+$penguin-primary: #2b5075;
+$penguin-primary-light: #4878b4;
+$penguin-primary-dark: #0f1a28;
+$penguin-secondary: #f06418;
+
+$primary: $penguin-primary;
+$primary-light: $penguin-primary-light;
+$primary-dark: $penguin-primary-dark;
+$secondary: $penguin-secondary;
+
+$nav-background: $penguin-primary;
+$footer-background: $penguin-primary;
 
 // Accordion overrides
 $accordion-icon-color: $primary;

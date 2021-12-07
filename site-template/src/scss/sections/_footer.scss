@@ -13,9 +13,7 @@
     display: inline-block;
     margin: 1rem auto 0rem auto;
     padding: 0;
-
   }
-
 
   h5 {
     display: inline-block;
@@ -45,12 +43,12 @@
   }
 
   &__icon {
-    width: 2rem;
+    width: 1rem;
     stroke: $white;
     padding-top: 0.5rem;
 
     @include media-breakpoint-up(md) {
-      width: 4rem;
+      width: 2rem;
     }
   }
 
@@ -64,7 +62,7 @@
       font-size: 0.9rem;
 
       @include media-breakpoint-up(lg) {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
       }
     }
 
@@ -74,7 +72,7 @@
       font-size: 0.7rem;
 
       @include media-breakpoint-up(lg) {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
   }
@@ -93,16 +91,17 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 2rem;
 
     a {
-
-
+      display: flex;
+      justify-content: center;
       margin: 0;
       padding: 0;
 
       i {
+        justify-self: center;
         font-size: 1.5rem;
         margin: 1rem 1rem 1rem 0;
 
@@ -110,7 +109,6 @@
           color: $white;
           text-decoration: underline;
           font-weight: bold;
-
         }
       }
 
@@ -138,12 +136,8 @@
 
 // Styling company info content
 
-
-
 .footer-middle {
   padding-top: 1.5rem;
-
-
 
   .company-list {
     display: block;
@@ -170,10 +164,13 @@
     align-items: center;
     flex-direction: column;
 
+    h5 {
+      @include logoFontFamily;
+    }
+
     img {
       width: 25%;
       max-width: 75px;
-
     }
 
     hr {
@@ -181,7 +178,20 @@
     }
 
     p {
-      margin-bottom: 0;
+      @include logoFontFamily;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+
+  #site-menu {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      align-self: flex-start;
+      justify-self: center;
     }
   }
 
@@ -192,8 +202,8 @@
     justify-content: center;
 
     a {
-      color: $primary-light;
-      font-weight: 700;
+      color: $white;
+      font-weight: 500;
       text-decoration: none;
       width: auto;
       height: 2rem;
@@ -216,11 +226,7 @@
       margin-top: 1.5rem;
     }
   }
-
 }
-
-
-
 
 .footer-bottom {
   padding: 0 1rem 4rem 1rem;
@@ -245,42 +251,35 @@
       font-size: 1.75rem;
       font-weight: 800;
       letter-spacing: -0.1em;
-      color: $primary-light;
-
-
+      color: $white;
     }
 
     .name-style {
       font-family: "Alegreya Sans", cursive;
       font-size: 2em;
       font-weight: 800;
-      color: $gray-500;
+      color: $secondary;
       letter-spacing: -0.05em;
-      padding-left: .1rem;
+      padding-left: 0.1rem;
     }
-
   }
 
   .attribution {
-
     display: block;
     margin: 0 auto;
     width: 300px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     font-size: 94%;
 
     a {
-      color: $primary-light;
+      color: $white !important;
       font-weight: 800;
 
       &:hover {
         color: $white !important;
         font-weight: 700 !important;
       }
-
     }
-
-
   }
 }
 
@@ -294,17 +293,15 @@
   bottom: 1.875rem;
   z-index: 9999;
   border: none;
-  background-color: $primary-light;
+  background-color: $secondary;
 
   &:visited {
-    background-color: $primary-light;
+    background-color: $secondary;
   }
 
   &:active {
-    background-color: $primary-light;
+    background-color: $secondary;
   }
-
-
 
   i {
     color: $white;

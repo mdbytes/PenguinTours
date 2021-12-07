@@ -7,10 +7,12 @@ import clientTwo from "../images/testimonials/client-2.png";
 import clientThree from "../images/testimonials/client-3.png";
 import clientFour from "../images/testimonials/client-4.png";
 
-import logoTest from "../images/logo2sm.png";
+import logoTest from "../images/logo.png";
 
 class Testimonials extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    document.querySelector("#homeLink").classList.remove("active");
+  }
 
   render() {
     return (

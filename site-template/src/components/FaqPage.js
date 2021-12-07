@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
-import logoFAQ from "../images/logo2sm.png";
+import logoFAQ from "../images/logo.png";
 
 class FaqPage extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {}
+  componentDidMount() {
+    document.querySelector("#homeLink").classList.remove("active");
+  }
 
   render() {
     return (

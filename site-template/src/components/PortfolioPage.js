@@ -1,36 +1,144 @@
 import React, { Component } from "react";
 
-import portfolioOne from "../images/portfolio/p01.jpeg";
-import portfolioTwo from "../images/portfolio/p02.jpeg";
-import portfolioThree from "../images/portfolio/p03.JPG";
-import portfolioFour from "../images/portfolio/p04.jpeg";
-import portfolioFive from "../images/portfolio/p05.jpeg";
-import portfolioSix from "../images/portfolio/p06.JPG";
-import portfolioSeven from "../images/portfolio/p07.png";
-import portfolioEight from "../images/portfolio/p08.png";
-import portfolioNine from "../images/portfolio/p09.png";
-import portfolioTen from "../images/portfolio/p10.jpeg";
+import portfolioOne from "../images/portfolio/portfolio-1.png";
+import portfolioTwo from "../images/portfolio/portfolio-2.png";
+import portfolioThree from "../images/portfolio/portfolio-3.png";
+import portfolioFour from "../images/portfolio/portfolio-4.png";
+import portfolioFive from "../images/portfolio/portfolio-5.png";
+import portfolioSix from "../images/portfolio/portfolio-6.png";
+import portfolioSeven from "../images/portfolio/portfolio-7.png";
+import portfolioEight from "../images/portfolio/portfolio-8.png";
+import portfolioNine from "../images/portfolio/portfolio-9.png";
+import portfolioTen from "../images/portfolio/portfolio-10.png";
 
-import logoPort from "../images/logo2sm.png";
+import GLightbox from "glightbox";
+
+import logoPort from "../images/logo.png";
 
 class PortfolioPage extends Component {
-  componentDidMount() {}
+  constructor(props) {
+    super(props);
+
+    this.startZero = this.startZero.bind(this);
+    this.displayGallery = this.displayGallery.bind(this);
+  }
+
+  state = {
+    startHere: 99,
+  };
+
+  startZero = () => {
+    //this.setState({ startHere: 0 });
+    this.displayGallery(0);
+  };
+
+  displayGallery = (evt) => {
+    console.dir(evt.target);
+
+    let targetButtonClass = evt.target.className;
+
+    console.log(targetButtonClass);
+
+    let startingSlide = 9;
+
+    if (targetButtonClass.includes("photo-0")) {
+      startingSlide = 0;
+    } else if (targetButtonClass.includes("photo-1")) {
+      startingSlide = 1;
+    } else if (targetButtonClass.includes("photo-2")) {
+      startingSlide = 2;
+    } else if (targetButtonClass.includes("photo-3")) {
+      startingSlide = 3;
+    } else if (targetButtonClass.includes("photo-4")) {
+      startingSlide = 4;
+    } else if (targetButtonClass.includes("photo-5")) {
+      startingSlide = 5;
+    } else if (targetButtonClass.includes("photo-6")) {
+      startingSlide = 6;
+    } else if (targetButtonClass.includes("photo-7")) {
+      startingSlide = 7;
+    } else if (targetButtonClass.includes("photo-8")) {
+      startingSlide = 8;
+    } else if (targetButtonClass.includes("photo-9")) {
+      startingSlide = 9;
+    }
+
+    const myGallery = GLightbox({
+      elements: [
+        {
+          href: portfolioOne,
+          type: "image",
+        },
+        {
+          href: portfolioTwo,
+          type: "image",
+        },
+        {
+          href: portfolioThree,
+          type: "image",
+        },
+        {
+          href: portfolioFour,
+          type: "image",
+        },
+        {
+          href: portfolioFive,
+          type: "image",
+        },
+        {
+          href: portfolioSix,
+          type: "image",
+        },
+        {
+          href: portfolioSeven,
+          type: "image",
+        },
+        {
+          href: portfolioEight,
+          type: "image",
+        },
+        {
+          href: portfolioNine,
+          type: "image",
+        },
+        {
+          href: portfolioTen,
+          type: "image",
+        },
+      ],
+      autoplayVideos: false,
+      startAt: startingSlide,
+      openEffect: "fade",
+      closeEffect: "fade",
+      zoomable: "true",
+    });
+
+    myGallery.on("close", () => {
+      myGallery.close();
+    });
+
+    myGallery.open();
+  };
+
+  componentDidMount() {
+    document.querySelector("#homeLink").classList.remove("active");
+  }
   render() {
     return (
       <section id="portfolio" className="portfolio">
         <div className="container">
           <div className="row text-center mt-5">
             <h1 className="display-3 fw-bold text-capitalize">
-              Latest Work
+              Photo Gallery
               <img src={logoPort} alt="logo" />
             </h1>
             <div className="heading-line"></div>
             <p className="lead">Here's a little of what's been going on...</p>
-            <p class="mobilePresent">
-              Tap on any image for additional details.
+            <p className="mobilePresent">
+              Tap on any image to display in full screen gallery.
             </p>
-            <p class="largePresent">
-              Hover over any image for additional details.
+            <p className="largePresent">
+              Hover over any image to display in full screen gallery.
             </p>
           </div>
           <div className="row text-center mt-5 mb-4 g-3">
@@ -45,7 +153,7 @@ class PortfolioPage extends Component {
                 Web Applications
               </button>
             </div>
-            <div className="row">
+            <div className="row portfolio-items">
               <div className="col-lg-6">
                 <div className="portfolio-box">
                   <img
@@ -56,17 +164,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>Feedback Focus</h4>
-                      <p>Email Survey Automation</p>
+                      <h4>Navigating Glaciers</h4>
+                      <p>To Penguin Territory</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a
-                          href="https://customer-email-response-app.herokuapp.com/"
-                          target="_blank"
+                        <button
+                          className="photo-0 glightbox"
+                          onClick={this.displayGallery}
                         >
-                          online
-                        </a>
+                          Display In Gallery
+                        </button>
                       </p>
                     </div>
                   </div>
@@ -83,14 +190,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>Careers</h4>
-                      <p>Employment Application</p>
+                      <h4>Close Encounters</h4>
+                      <p>Of the Penguin Kind</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a href="http://careers.mdbytes.us/" target="_blank">
-                          online
-                        </a>
+                        <button
+                          className="photo-1 glightbox"
+                          onClick={this.displayGallery}
+                        >
+                          Display in Gallery
+                        </button>
                       </p>
                     </div>
                   </div>
@@ -106,14 +215,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>Juntos</h4>
-                      <p>Social Media Site</p>
+                      <h4>Penguin Community</h4>
+                      <p>At Feeding Sites</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a href="http://juntos.mdbytes.us/" target="_blank">
-                          online
-                        </a>
+                        <button
+                          className="photo-2 glightbox"
+                          onClick={this.displayGallery}
+                        >
+                          Display In Gallery
+                        </button>{" "}
                       </p>
                     </div>
                   </div>
@@ -129,14 +240,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>Wild Things Nature Photography</h4>
-                      <p>A WordPress Original Theme</p>
+                      <h4>The Circle of Life</h4>
+                      <p>With Penguin Babies</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a href="http://gowildthings.com" target="_blank">
-                          online
-                        </a>
+                        <button
+                          className="photo-3 glightbox"
+                          onClick={this.displayGallery}
+                        >
+                          Display In Gallery
+                        </button>
                       </p>
                     </div>
                   </div>
@@ -152,17 +265,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>Vidly Video</h4>
-                      <p>Video Streaming Service Front End</p>
+                      <h4>Penguin Journeys</h4>
+                      <p>Hundreds of Miles</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a
-                          href="http://vidly001-dev.us-east-2.elasticbeanstalk.com/"
-                          target="_blank"
+                        <button
+                          className="photo-4 glightbox"
+                          onClick={this.displayGallery}
                         >
-                          online
-                        </a>
+                          Display In Gallery
+                        </button>
                       </p>
                     </div>
                   </div>
@@ -178,16 +290,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>
-                        <span class="logo-style">md</span> Bytes Blog
-                      </h4>
-                      <p>An Open Source Blog Project</p>
+                      <h4>Solo Encounters</h4>
+                      <p>With a Communal Bird</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a href="http://blog.mdbytes.us" target="_blank">
-                          online
-                        </a>
+                        <button
+                          className="photo-5 glightbox"
+                          onClick={this.displayGallery}
+                        >
+                          Display In Gallery
+                        </button>{" "}
                       </p>
                     </div>
                   </div>
@@ -203,17 +315,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>ChatApp</h4>
-                      <p>Secure Instant Messaaging</p>
+                      <h4>Growing Up Penguin</h4>
+                      <p>Constant Shelter and Support</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a
-                          href="https://mdbytes-chat-app.herokuapp.com/"
-                          target="_blank"
+                        <button
+                          className="photo-6 glightbox"
+                          onClick={this.displayGallery}
                         >
-                          online
-                        </a>
+                          Display In Gallery
+                        </button>{" "}
                       </p>
                     </div>
                   </div>
@@ -229,14 +340,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>MIREFA</h4>
-                      <p>Ministry Site in Spanish</p>
+                      <h4>Penguin Games</h4>
+                      <p>For Survival Itself</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a href="https://mirefa.org" target="_blank">
-                          online
-                        </a>
+                        <button
+                          className="photo-7 glightbox"
+                          onClick={this.displayGallery}
+                        >
+                          Display In Gallery
+                        </button>{" "}
                       </p>
                     </div>
                   </div>
@@ -252,14 +365,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>The Bird</h4>
-                      <p>Responsive Social Media Site</p>
+                      <h4>Penguin Heights</h4>
+                      <p>Incredible Destinations</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a href="https://bird.mdbytes.us" target="_blank">
-                          online
-                        </a>
+                        <button
+                          className="photo-8 glightbox"
+                          onClick={this.displayGallery}
+                        >
+                          Display In Gallery
+                        </button>{" "}
                       </p>
                     </div>
                   </div>
@@ -275,14 +390,16 @@ class PortfolioPage extends Component {
                   />
                   <div className="portfolio-info">
                     <div className="caption">
-                      <h4>Primal Strength</h4>
-                      <p>Another WordPress Original Theme</p>
+                      <h4>Summer in Antarctica</h4>
+                      <p>Warmer and Less Snow</p>
                       <p>
-                        Visit:
                         <br />{" "}
-                        <a href="https://goprimalstrength.com" target="_blank">
-                          online
-                        </a>
+                        <button
+                          className="photo-9 glightbox"
+                          onClick={this.displayGallery}
+                        >
+                          Display In Gallery
+                        </button>{" "}
                       </p>
                     </div>
                   </div>

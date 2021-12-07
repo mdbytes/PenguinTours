@@ -1,12 +1,18 @@
-@use '../custom'as *;
-@use '../components/mixins'as *;
-@use '../components/animations'as *;
+@use "../custom"as *;
+@use "../components/mixins"as *;
+@use "../components/animations"as *;
 
 .intro-section {
-    @include gradient;
+    .container {}
+
+    min-height: 100vh;
 
     padding: 10rem 0 0 0;
     width: 100%;
+
+    @include media-breakpoint-down(lg) {
+        padding: 4rem 0 0 0;
+    }
 
     a {
         text-decoration: none;
@@ -14,10 +20,82 @@
 
     .btn-rounded span i {
         font-size: 2rem !important;
-
     }
 
     .intros {
+        .display-2 {
+            img {
+                padding: 2rem;
+                width: 100%;
+                justify-self: center;
+                background-color: rgba($white, 0);
+                box-shadow: 0px 0px 8px 8px rgba($white, 0);
+                border-radius: 8px;
+            }
+        }
+
+        .display-2--description {
+            color: $gray-700;
+
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px 8px rgba($white, 0);
+            background-color: rgba($white, 0);
+            padding: 1rem;
+            margin-bottom: 3rem;
+
+            @include media-breakpoint-down(sm) {}
+
+            .mobileVisible {
+                display: none;
+
+                @include media-breakpoint-down(sm) {
+                    display: flex;
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        #intro {
+            margin-left: 2rem;
+
+            span {
+                color: $white;
+                font-size: 1.2rem;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 0.9rem;
+                }
+            }
+
+            .logo-style {
+                color: $primary;
+                font-size: 1.5rem;
+            }
+
+            .name-style {
+                color: $secondary;
+                font-size: 1.5rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-left: 1rem;
+            }
+        }
+
+        .btn-rounded {
+            border: none;
+            background-color: rgba($white, 0.65);
+            box-shadow: 0 0 2rem rgba($white, 1);
+
+            &:hover {
+                box-shadow: 0 0 2rem rgba($secondary, 1);
+
+                a {
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+        }
 
         .video-box {
             position: relative;
@@ -26,7 +104,18 @@
                 display: block;
                 margin: 0 auto;
                 max-height: 50vh;
-                width: auto;
+                width: 50%;
+                padding: 1rem;
+                background-color: rgba($white, 0.5);
+                box-shadow: 0 0 10px 20px rgba($white, 0.5);
+                border-radius: 35%;
+
+                margin-top: 5rem;
+
+                @include media-breakpoint-down(md) {
+                    width: 80%;
+                    margin-bottom: 6rem;
+                }
             }
 
             button {
@@ -45,25 +134,21 @@
                     margin-top: 5rem;
 
                     i {
-                        font-size: 5rem;
-                        color: $primary;
+                        font-size: 3rem;
+                        color: rgba($secondary, 0.85);
 
                         @include media-breakpoint-down(md) {
                             font-size: 3rem;
                         }
                     }
-
-
-
-
                 }
 
                 span.border-animation {
                     position: absolute;
                     box-sizing: border-box;
-                    width: 5rem;
-                    height: 5rem;
-                    border: 0.55rem solid $white;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border: 0.55rem solid rgba($white, 0.5);
                     border-radius: 50%;
                     animation: pulse-border 4s linear infinite;
 
@@ -77,15 +162,10 @@
                     }
 
                     &--border-2 {
-                        animation-delay: 2s;
+                        // animation-delay: 2s;
                     }
                 }
-
-
-
             }
         }
     }
-
-
 }
