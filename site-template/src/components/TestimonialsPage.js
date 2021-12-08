@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-import Companies from "./Companies";
+import TestimonialSlider from "./testimonials/TestimonialSlider";
 
 import clientOne from "../images/testimonials/client-1.jpg";
 import clientTwo from "../images/testimonials/client-2.png";
