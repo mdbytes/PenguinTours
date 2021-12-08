@@ -21,7 +21,9 @@ class TestimonialSlider extends Component {
         >
           <div className="carousel-inner">
             {testimonialDetail.map((obj) => (
-              <React.Fragment>{testimonialSlide(obj)}</React.Fragment>
+              <div className="carousel-item" key={obj.key}>
+                {testimonialSlide(obj)}
+              </div>
             ))}
           </div>
           <div className="text-center">

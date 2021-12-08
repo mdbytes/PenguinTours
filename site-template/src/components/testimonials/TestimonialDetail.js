@@ -11,6 +11,7 @@ const testimonialDetail = [
       "Can't say enough good things about Penguine Tours.  They are what they say.  Awesome adventures.  Excellent accommodations.",
     image: clientOne,
     stars: 5,
+    key: 1,
   },
   {
     name: "Charlie Foglestock",
@@ -19,6 +20,7 @@ const testimonialDetail = [
       "I've been going on Penguin Tours annually for 15 years.  Other than the occassional polar bear, we've had a great time!",
     image: clientTwo,
     stars: 4,
+    key: 2,
   },
   {
     name: "Joy Fitsimmons",
@@ -27,6 +29,7 @@ const testimonialDetail = [
       "Went on my first tour last year.  In love with this place, the adventure, the accommodations. Take warm clothes ;)",
     image: clientThree,
     stars: 4,
+    key: 3,
   },
   {
     name: "Claire Williams",
@@ -35,6 +38,7 @@ const testimonialDetail = [
       "Took our company leadership on a retreat to observe and learn from the tight knit communal behavior of the penguins.",
     image: clientFour,
     stars: 5,
+    key: 4,
   },
 ];
 

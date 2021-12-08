@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import GLightbox from "glightbox";
-
 import videoImage from "../images/intro-section/video-image.png";
 import nameLogo from "../images/name-image.png";
 class LandingPage extends Component {

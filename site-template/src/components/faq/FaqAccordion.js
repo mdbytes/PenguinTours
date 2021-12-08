@@ -3,9 +3,6 @@ import makeFaq from "./Faq";
 import faqDetail from "./FaqDetail";
 
 class FaqAccordion extends Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     document.querySelector("#homeLink").classList.remove("active");
   }

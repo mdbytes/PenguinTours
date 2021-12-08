@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import logoSvc from "../../images/logo.png";
 
 class ServicesIntro extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <React.Fragment>

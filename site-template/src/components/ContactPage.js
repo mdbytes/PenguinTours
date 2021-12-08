@@ -3,10 +3,6 @@ import React, { Component } from "react";
 import logoCon from "../images/logo.png";
 
 class ContactPage extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     timesRun: 0,
   };

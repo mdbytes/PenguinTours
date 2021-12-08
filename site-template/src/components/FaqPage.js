@@ -4,9 +4,6 @@ import FaqAccordion from "./faq/FaqAccordion";
 import logoFAQ from "../images/logo.png";
 
 class FaqPage extends Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     document.querySelector("#homeLink").classList.remove("active");
     document.querySelector("#heading1 > button").click();

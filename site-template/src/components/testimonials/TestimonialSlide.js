@@ -3,7 +3,7 @@ import getStars from "./GetStars";
 
 const testimonialSlide = (obj) => {
   return (
-    <div className="carousel-item">
+    <React.Fragment>
       <div className="testimonials__card">
         <p className="lh-lg">{obj.comments}</p>
         <div className="ratings">{getStars(obj)}</div>
@@ -19,7 +19,7 @@ const testimonialSlide = (obj) => {
         <h3>{obj.name}</h3>
         <p className="fw-light">{obj.jobTitle}</p>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
