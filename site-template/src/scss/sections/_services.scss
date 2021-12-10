@@ -1,3 +1,13 @@
+/**
+ *
+ * Filename:  _services.scss
+ * Author:    Martin Dwyer
+ * Purpose:   Provides styling for the Services component
+ * Date Mod:  December 8, 2021
+ *
+ */
+
+
 @use "../custom"as *;
 @use "../components/mixins"as *;
 @use "../components/mixins";
@@ -19,24 +29,36 @@
         color: $white;
     }
 
-    .service-items {
-        color: $white;
+    #services-intro-overview {
+        .service-items {
+            color: $white;
 
-        .service-item {
-            padding: 0.5em 0 0.5em 1em;
-            text-align: left;
-
-            div {
+            .service-item {
+                padding: 0.5em 0 0.5em 1em;
                 text-align: left;
+
+                div {
+                    text-align: left;
+                }
             }
         }
-    }
 
-    .services-overview {
-        border-radius: 8px;
-        color: $white;
-        font-size: 1.2rem;
-        line-height: 1.7rem;
+        .services-overview {
+            border-radius: 8px;
+            color: $white;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            background-color: rgba($primary, .5);
+            border-radius: 8px;
+
+            &>div {
+                border: none;
+            }
+        }
+
     }
 
     .service-item-row {
@@ -51,6 +73,8 @@
         border-radius: 8px;
         box-shadow: 0px 0px 3.5rem $primary;
     }
+
+
 
     .services-column {
         margin: 0rem auto;
@@ -144,6 +168,10 @@
             width: 95%;
             border-radius: 8px;
             box-shadow: 8px 8px 8px $primary;
+        }
+
+        @media (max-width: 992px) {
+            margin-top: 0rem;
         }
     }
 }

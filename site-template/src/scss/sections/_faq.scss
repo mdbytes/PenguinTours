@@ -1,5 +1,14 @@
+/**
+ * Filename:  _faq.scss
+ * Author:    Martin Dwyer
+ * Purpose:   Provides styling for the Faq component
+ * Date Mod:  December 8, 2021
+ *
+ */
+
 @use "../custom"as *;
 
+// Styling for the FAQ Section of the website
 #faq {
     padding-top: 15vh;
 

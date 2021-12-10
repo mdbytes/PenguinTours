@@ -1,6 +1,15 @@
+/**
+ * Filename:  _footer.scss
+ * Author:    Martin Dwyer
+ * Purpose:   Provides styling for the Footer component
+ * Date Mod:  December 8, 2021
+ *
+ */
+
 @use "../custom"as *;
 @use "../components/mixins"as *;
 
+// Styling for the top one-third row in the footer - contact info
 .footer {
   padding-top: 1rem;
   padding-bottom: 0rem;
@@ -78,85 +87,68 @@
   }
 }
 
-// Styling social media
-.footer-sm {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
 
-  padding: 0;
 
-  #social-icons {
-    width: 100%;
+// Styling the middle one-third row of the footer
+.footer-middle {
+  padding-top: 1.5rem;
+
+  // Styling social media
+  .footer-sm {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
 
-    a {
+    padding: 0;
+
+    #social-icons {
+      width: 100%;
       display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 2rem;
 
-      i {
-        justify-self: center;
-        font-size: 1.5rem;
-        margin: 1rem 1rem 1rem 0;
+      a {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        i {
+          justify-self: center;
+          font-size: 1.5rem;
+          margin: 1rem 1rem 1rem 0;
+
+          &:hover {
+            color: $white;
+            text-decoration: underline;
+            font-weight: bold;
+          }
+        }
 
         &:hover {
           color: $white;
           text-decoration: underline;
-          font-weight: bold;
-        }
-      }
-
-      &:hover {
-        color: $white;
-        text-decoration: underline;
-        font-weight: 700;
-      }
-    }
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-    flex-basis: 20%;
-
-    i {
-      font-size: 2rem;
-      margin: 1rem 1rem 1rem 0;
-
-      @include media-breakpoint-up(sm) {}
-    }
-  }
-}
-
-// Styling company info content
-
-.footer-middle {
-  padding-top: 1.5rem;
-
-  .company-list {
-    display: block;
-    list-style-type: none;
-    position: relative;
-
-    li {
-      margin-bottom: 0.5rem;
-
-      a {
-        text-decoration: none;
-        color: $white;
-
-        &:hover {
-          color: $secondary;
+          font-weight: 700;
         }
       }
     }
+
+    a {
+      color: white;
+      text-decoration: none;
+      flex-basis: 20%;
+
+      i {
+        font-size: 2rem;
+        margin: 1rem 1rem 1rem 0;
+
+        @include media-breakpoint-up(sm) {}
+      }
+    }
   }
+
 
   #mascot-container {
     display: flex;
@@ -228,6 +220,7 @@
   }
 }
 
+// Styling the bottom third of the footer
 .footer-bottom {
   padding: 0 1rem 4rem 1rem;
 
@@ -284,7 +277,6 @@
 }
 
 // style back to top button
-
 .back-to-top {
   position: fixed;
   width: 3rem;
@@ -294,6 +286,11 @@
   z-index: 9999;
   border: none;
   background-color: $secondary;
+
+  @media (max-width:414px) {
+    width: 2rem;
+    height: 2rem;
+  }
 
   &:visited {
     background-color: $secondary;
@@ -307,5 +304,9 @@
     color: $white;
     font-size: 2rem;
     @include absoluteCenter;
+
+    @media (max-width: 414px) {
+      font-size: 1.25rem;
+    }
   }
 }

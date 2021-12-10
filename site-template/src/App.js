@@ -1,27 +1,44 @@
+/**
+ *
+ * Filename:  App.js
+ * Author:     Martin Dwyer
+ * Purpose:   Sets up main App which is rendered in index.js
+ *            Imports main functional componets and routes pages
+ *            to components with BrowserRouter
+ * Date Mod:  December 8, 2021
+ *
+ */
+
+// Import React components first
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+// Import main site components
 import NavBar from "./components/NavBar";
 import ScrollToTop from "./components/ScrollToTop";
 import LandingPage from "./components/LandingPage";
 import ServicesPage from "./components/ServicesPage";
 import Testimonials from "./components/TestimonialsPage";
+import FaqPage from "./components/FaqPage";
 import PortfolioPage from "./components/PortfolioPage";
 import ContactPage from "./components/ContactPage";
 import Footer from "./components/Footer";
 
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-
+// Import styling, which is compiled from Sass - customized Bootsrap v5.3
 import "glightbox/dist/css/glightbox.css";
-import "./css/App.css";
+import "./css/main.css";
 
+// Import Bootstrap and GLightbox JavaScript
 import "bootstrap/dist/js/bootstrap.js";
 import "glightbox/dist/js/glightbox.js";
-import FaqPage from "./components/FaqPage";
 
+/**
+ * Router set up to handle traffic on the website.
+ * Exact paths result in the App routing to each route accurately
+ * to the correct component.
+ *
+ * @returns primary router component of the App
+ */
 function App() {
   return (
     <div className="App">

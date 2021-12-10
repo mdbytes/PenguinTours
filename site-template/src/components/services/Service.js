@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const service = (serviceObj) => {
   return (
-    <div className="row service-item-row">
-      <div className="col-md-6 col-sm-12 col-xs-12 services-column">
+    <React.Fragment>
+      <div className="col-lg-6 col-sm-12 col-xs-12 services-column">
         <div className="services__content">
           <div className="icon fas fa-paper-plane d-block"></div>
           <h3 className="display-3--title">{serviceObj.title}</h3>
@@ -23,12 +23,12 @@ const service = (serviceObj) => {
           </div>
         </div>
       </div>
-      <div className="col-md-6 col-sm-12 col-xs-12  services-column">
+      <div className="col-lg-6 col-sm-12 col-xs-12  services-column">
         <div className="services__pic">
           <img src={serviceObj.image} alt="UI Design" className="img-fluid" />
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

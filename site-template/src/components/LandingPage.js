@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import GLightbox from "glightbox";
 import videoImage from "../images/intro-section/video-image.png";
 import nameLogo from "../images/name-image.png";
+import tagLine from "../images/tagline.png";
+
 class LandingPage extends Component {
   componentDidMount() {
     const lightbox = GLightbox({
@@ -18,7 +20,7 @@ class LandingPage extends Component {
       <section id="home" className="intro-section">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-md-6 intros">
+            <div className="col-lg-6 intros">
               <h1 className="display-2">
                 <span>
                   <img src={nameLogo} alt="name logo" />
@@ -27,35 +29,31 @@ class LandingPage extends Component {
               </h1>
               <div id="intro">
                 <span className="display-2--description lh-base">
-                  Connecting penguins and people.
+                  <div id="tagline">
+                    <img src={tagLine} alt="tag line" />
+                  </div>
                   <br />
-                  <br />A responsive layout demo by{" "}
+                  <br />A site demo by{" "}
                   <a href="https://mdbytes.com">
                     <span className="name-style">
                       <span className="logo-style">md </span>Bytes
                     </span>
                   </a>
-                  .
-                  <div className="mobileVisible">
-                    <br />
-                    <br />
-                    <p>Watch our introductory video below.</p>
-                  </div>
                 </span>
 
                 <button
                   type="button"
                   className="glightbox rounded-pill btn-rounded"
                 >
-                  Watch Our Video{" "}
+                  Penguin Video{" "}
                   <span>
-                    <i className="bi bi-arrow-right"></i>
+                    <i className="bi bi-play-fill"></i>
                   </span>
                 </button>
               </div>
             </div>
 
-            <div className="col-md-6 intros">
+            <div className="col-lg-6 intros">
               <div className="video-box">
                 <img
                   src={videoImage}

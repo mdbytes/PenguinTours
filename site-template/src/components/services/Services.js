@@ -8,7 +8,9 @@ class Services extends Component {
     return (
       <div className="service-objects">
         {servicesDetail.map((obj) => (
-          <React.Fragment>{service(obj)}</React.Fragment>
+          <div className="row service-item-row" key={obj.key}>
+            {service(obj)}
+          </div>
         ))}
       </div>
     );
