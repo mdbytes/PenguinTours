@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FaqAccordion from "./faq/FaqAccordion";
 
-import logoFAQ from "../images/logo.png";
+import logoFAQ from "../images/logo.jpeg";
 
 class FaqPage extends Component {
   componentDidMount() {

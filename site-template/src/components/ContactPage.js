@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import logoCon from "../images/logo.png";
+import logoCon from "../images/logo.jpeg";
 
 class ContactPage extends Component {
   state = {

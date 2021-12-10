@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TestimonialSlider from "./testimonials/TestimonialSlider";
 
-import logoTest from "../images/logo.png";
+import logoTest from "../images/logo.jpeg";
 
 class Testimonials extends Component {
   componentDidMount() {

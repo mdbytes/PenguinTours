@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import logoPort from "../../images/logo.png";
+import logoPort from "../../images/logo.jpeg";
 
 class PortfolioIntro extends Component {
   componentDidMount() {

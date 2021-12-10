@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import GLightbox from "glightbox";
-import videoImage from "../images/intro-section/video-image.png";
+import videoImage from "../images/intro-section/video-image.jpeg";
 import nameLogo from "../images/name-image.png";
 import tagLine from "../images/tagline.png";
 

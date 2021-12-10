@@ -17347,7 +17347,7 @@ body {
   right: 0;
   z-index: -1;
   /* needed to keep in the background */
-  background: url("../images/background3.png") top center;
+  background: url("../images/background3.jpeg") top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17659,6 +17659,7 @@ button.gnext.gbtn {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 -10px -10px white;
   border-radius: 20%;
   margin-top: 5rem;
 }

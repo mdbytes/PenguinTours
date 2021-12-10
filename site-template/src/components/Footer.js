@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import penny from "../images/logo.png";
+import penny from "../images/logo.jpeg";
 
 class Footer extends Component {
   constructor(props) {

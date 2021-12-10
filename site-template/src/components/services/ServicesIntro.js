@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logoSvc from "../../images/logo.png";
+import logoSvc from "../../images/logo.jpeg";
 
 class ServicesIntro extends Component {
   render() {
