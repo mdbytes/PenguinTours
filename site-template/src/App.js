@@ -29,8 +29,8 @@ import "glightbox/dist/css/glightbox.css";
 import "./css/main.css";
 
 // Import Bootstrap and GLightbox JavaScript
-import "bootstrap/dist/js/bootstrap.js";
-import "glightbox/dist/js/glightbox.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "glightbox/dist/js/glightbox.min.js";
 
 /**
  * Router set up to handle traffic on the website.

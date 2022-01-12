@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import logo from "../images/logo.jpeg";
+const logo =
+  "https://dm2306files.storage.live.com/y4mQ04FmkR-A2CPGkLG63pCI1ploGZrL9iWtm9FZxrGgC7ICLG2-hOElR3PXh61tX40hujpWu02hER9rYQanUCh6iO44yMSojF1jIn0LkcFLERPJh7wGAyym8t_v9289VI8SB0tqgHmghntBUvNzbvnbJwcOTloK5vwaTXUCS7K0bauneH2HwrF_D0x9prAsU2C?width=128&height=150&cropmode=none";
 
 class NavBar extends Component {
   constructor(props) {
@@ -67,6 +68,17 @@ class NavBar extends Component {
                 </li>
                 <li className="nav-item d-flex align-items-center ">
                   <NavLink
+                    id="portfolioLink"
+                    className="nav-link"
+                    to="/portfolio"
+                    onClick={this.navClick}
+                  >
+                    Gallery
+                  </NavLink>
+                </li>
+
+                <li className="nav-item d-flex align-items-center ">
+                  <NavLink
                     id="testimonialsLink"
                     className="nav-link"
                     to="/testimonials"
@@ -85,16 +97,7 @@ class NavBar extends Component {
                     Faq
                   </NavLink>
                 </li>
-                <li className="nav-item d-flex align-items-center ">
-                  <NavLink
-                    id="portfolioLink"
-                    className="nav-link"
-                    to="/portfolio"
-                    onClick={this.navClick}
-                  >
-                    Gallery
-                  </NavLink>
-                </li>
+
                 <li className="nav-item d-flex align-items-center ">
                   <NavLink
                     id="contactLink"

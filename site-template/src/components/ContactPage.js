@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import logoCon from "../images/logo.jpeg";
+const logoCon =
+  "https://dm2306files.storage.live.com/y4mQ04FmkR-A2CPGkLG63pCI1ploGZrL9iWtm9FZxrGgC7ICLG2-hOElR3PXh61tX40hujpWu02hER9rYQanUCh6iO44yMSojF1jIn0LkcFLERPJh7wGAyym8t_v9289VI8SB0tqgHmghntBUvNzbvnbJwcOTloK5vwaTXUCS7K0bauneH2HwrF_D0x9prAsU2C?width=128&height=150&cropmode=none";
 
 class ContactPage extends Component {
   state = {
@@ -87,6 +88,8 @@ class ContactPage extends Component {
                   </div>
                   <div className="text-center d-grid mt-1">
                     <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
                       type="button"
                       className="btn btn-secondary rounded-pill pt-3 pb-3"
                     >
@@ -94,6 +97,57 @@ class ContactPage extends Component {
                     </button>
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLabel">
+                    Message Not Submitted
+                  </h5>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div className="modal-body text-black">
+                  <p>
+                    Thanks for visiting Penguin Tours, a site used for
+                    demonstration purposes by MD Web Technologies.
+                  </p>
+
+                  <p>
+                    If you would like to send us a message, visit us at{" "}
+                    <a href="https://mdbytes.com" target="_blank">
+                      www.mdbytes.com{" "}
+                    </a>
+                    .
+                  </p>
+
+                  <p>We look forward to hearing from you!</p>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           </div>
