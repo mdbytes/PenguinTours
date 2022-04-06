@@ -3,11 +3,6 @@ import FaqAccordion from "./faq/FaqAccordion";
 import Seo from "./layout/Seo";
 
 class FaqPage extends Component {
-  componentDidMount() {
-    //document.querySelector("#homeLink").classList.remove("active");
-    //document.querySelector("#heading1 > button").click();
-  }
-
   render() {
     return (
       <section id="faq" className="faq">

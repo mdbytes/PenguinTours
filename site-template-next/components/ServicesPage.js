@@ -4,10 +4,6 @@ import Services from "./services/Services";
 import Seo from "./layout/Seo";
 
 class ServicesPage extends Component {
-  componentDidMount() {
-    // document.querySelector("#homeLink").classList.remove("active");
-  }
-
   render() {
     return (
       <section id="services" className="services">

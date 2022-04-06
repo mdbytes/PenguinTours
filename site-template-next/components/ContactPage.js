@@ -7,12 +7,6 @@ class ContactPage extends Component {
     timesRun: 0,
   };
 
-  componentDidMount() {
-    //document.querySelector("#homeLink").classList.remove("active");
-  }
-
-  componentWillUnmount() {}
-
   render() {
     return (
       <section id="contact" className="get-started">

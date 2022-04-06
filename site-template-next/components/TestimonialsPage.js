@@ -3,10 +3,6 @@ import TestimonialSlider from "./testimonials/TestimonialSlider";
 import Seo from "./layout/Seo";
 
 class Testimonials extends Component {
-  componentDidMount() {
-    //document.querySelector("#homeLink").classList.remove("active");
-  }
-
   render() {
     return (
       <div>
