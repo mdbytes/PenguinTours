@@ -4,7 +4,9 @@ import faqDetail from "./FaqDetail";
 
 class FaqAccordion extends Component {
   componentDidMount() {
-    //document.querySelector("#homeLink").classList.remove("active");
+    if (window !== undefined) {
+      document.querySelector("#heading1 > button").click();
+    }
   }
 
   render() {
