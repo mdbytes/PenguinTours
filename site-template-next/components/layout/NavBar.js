@@ -71,9 +71,16 @@ class NavBar extends Component {
                 </li>
                 <li
                   id="portfolioLink"
-                  className="nav-item d-flex align-items-center nav-link"
+                  className="nav-item d-flex align-items-center"
                 >
-                  <Link href="/portfolio">Portfolio</Link>
+                  <Link
+                    href="/portfolio"
+                    className="nav-link"
+                    onClick={this.navClick}
+                    passHref
+                  >
+                    Portfolio
+                  </Link>
                 </li>
                 <li className="nav-item d-flex align-items-center ">
                   <Link
