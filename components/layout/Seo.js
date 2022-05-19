@@ -1,9 +1,23 @@
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 
 const Seo = (props) => {
   return (
     <Head>
+      <Script
+        id="google-tag-manager"
+        strategy="lazyOnload"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-CXK3HPWZTJ"
+      ></Script>
+      <Script id="google-analytics" strategy="lazyOnload">
+        {`
+        window.dataLayer = window.dataLayer || []; 
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date()); gtag('config', 'G-CXK3HPWZTJ'); 
+        `}
+      </Script>
       <title>{props.title}</title>
       <meta property="og:title" content={props.title} key="title" />
       <meta
