@@ -27,6 +27,7 @@
   h5 {
     display: inline-block;
     margin: 0 auto;
+    color: $white;
   }
 
   ul {
@@ -66,9 +67,10 @@
     font-weight: 600;
 
     &--title {
-      color: $white;
+      color: $white !important;
       text-decoration: none;
       font-size: 0.9rem;
+      border-bottom: none;
 
       @include media-breakpoint-up(lg) {
         font-size: 1.1rem;
@@ -114,6 +116,8 @@
         justify-content: center;
         margin: 0;
         padding: 0;
+        text-decoration: none;
+        border-bottom: none;
 
         i {
           justify-self: center;
@@ -121,16 +125,14 @@
           margin: 1rem 1rem 1rem 0;
 
           &:hover {
-            color: $white;
-            text-decoration: underline;
+            color: $secondary;
             font-weight: bold;
           }
         }
 
         &:hover {
-          color: $white;
-          text-decoration: underline;
-          font-weight: 700;
+          color: $secondary;
+          font-weight: bold;
         }
       }
     }
@@ -158,6 +160,7 @@
 
     h5 {
       @include logoFontFamily;
+      color: $white;
     }
 
     img {
@@ -184,6 +187,7 @@
     h5 {
       align-self: flex-start;
       justify-self: center;
+      color: $white;
     }
   }
 
@@ -204,6 +208,7 @@
       margin: 0;
       margin-left: 0.35rem;
       margin-right: 0.35rem;
+      border-bottom: none;
 
       &:hover {
         color: $white;
@@ -231,6 +236,7 @@
     a {
       color: $white;
       text-decoration: none;
+      border-bottom: none;
 
       &:hover {
         color: $white;
@@ -265,11 +271,12 @@
     font-size: 94%;
 
     a {
-      color: $white !important;
+
       font-weight: 800;
+      border-bottom: none;
 
       &:hover {
-        color: $white !important;
+
         font-weight: 700 !important;
       }
     }

@@ -11,19 +11,15 @@
 
 // Styling for the contact page
 .get-started {
+    @include pageBackground;
     padding: 15vh 0 4rem 0;
 
 
-    .display-3 {
-        color: $white;
-    }
-
-    div>div>p {
-        color: $white;
-    }
 
     // Background and dimensions for the primary content
     div>div.row.text-white {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
         padding-bottom: 3rem;
         background: linear-gradient(180deg,
                 rgba($white, 0.3) 0%,
@@ -31,11 +27,7 @@
                 rgba($white, 0.8) 60%,
                 rgba($white, 1) 100%);
         border-radius: 8px;
-
-        .display-3--title {
-            color: $white !important;
-        }
-
+        box-shadow: 0 0 3rem #666;
 
 
         @media (max-width: 768px) {

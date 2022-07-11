@@ -11,6 +11,7 @@
 @use "../components/mixins"as *;
 
 .testimonials {
+    @include pageBackground;
     position: relative;
     padding: 0;
     padding-bottom: 4rem;
@@ -27,8 +28,9 @@
         min-height: 25vh;
         width: 80vw;
         max-width: 800px;
-        margin: 0 auto;
+        margin: 3rem auto 0 auto;
         text-align: center;
+        box-shadow: 0 0 3rem #666;
 
         p {
             font-size: 1.25rem;
@@ -67,7 +69,7 @@
         margin-bottom: 1rem;
         text-align: center;
         font-weight: 500;
-        color: $white;
+        color: $primary;
 
         h3 {
             padding-top: 0.8rem;
@@ -85,6 +87,7 @@
         margin: 0.5rem !important;
         background-color: $white;
         border: none;
+        box-shadow: 0 0 1rem $primary;
 
         i {
             color: $primary;

@@ -44,7 +44,7 @@ class ServicesIntro extends Component {
           </div>
           <div className="col-md-6">
             <div className="services-overview p-4 text-start">
-              <p className="fw-light">
+              <p className="fw-light text-box">
                 Penguin Tours, Ltd. is a ficticious company invented to
                 demonstrate functionality and adaptability of a website
                 template. But if we existed, we would provide year round tours

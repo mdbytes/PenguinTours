@@ -23,6 +23,7 @@
 
     a {
         text-decoration: none;
+        border-bottom: none;
     }
 
     // watch our video play icon
@@ -32,122 +33,91 @@
 
     // class .intros applies to both columns on LandingPage
     .intros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         // heading text
         .display-2 {
-            img {
-                padding: 2rem 0rem;
-                width: 100%;
+            @include logoFontFamily;
+            font-weight: 500;
+            text-shadow: 0.25rem 0.25rem 0.25rem rgba($black, 1);
+
+            i {
+                margin-left: 1rem;
+                align-self: center;
                 justify-self: center;
-                background-color: rgba($white, 0);
-                box-shadow: 0px 0px 8px 8px rgba($white, 0);
-                border-radius: 8px;
+            }
+
+            @media only screen and (max-width: 1250px) {
+                font-size: 3.5rem;
+            }
+
+            @media only screen and (max-width: 992px) {
+                margin-top: 5rem;
+            }
+
+            @media only screen and (max-width: 550px) {
+                font-size: 2.75rem;
+            }
+
+            @media only screen and (max-width: 380px) {
+                font-size: 1.75rem;
+            }
+
+            &--intro {
+                @include logoFontFamily;
+                font-size: 2rem;
+                font-weight: 400;
+
+                @media only screen and (max-width: 992px) {
+                    font-size: 2rem;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    font-size: 1.5rem;
+                }
+
+                @media only screen and (max-width: 380px) {
+                    font-size: 1rem;
+                }
             }
         }
 
         // site tag line in first column
         .display-2--description {
-            color: $gray-700;
+            color: $white;
 
-            border-radius: 8px;
-            box-shadow: 0px 0px 8px 8px rgba($white, 0);
-            background-color: rgba($white, 0);
+            @media only screen and (max-width: 992px) {
+                font-size: 1rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                font-size: 0.8rem;
+
+                .name-style {
+                    font-size: 1rem;
+                }
+
+                .logo-style {
+                    font-size: 1.1rem;
+                }
+            }
+
             padding: 1rem;
             margin-bottom: 3rem;
-
-            @media (max-width: 414px) {
-                margin-bottom: 0rem;
-            }
-
-
         }
 
-        // Additional text for site
-        #intro {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 2rem;
-
-            span {
-                color: $white;
-                font-size: 1rem;
-                text-align: center;
-
-                #tagline {
-                    img {
-                        display: block;
-                        width: 80%;
-                        margin: 0 auto;
-                    }
-
-                    margin-bottom: 3rem;
-                }
-
-
-                @include media-breakpoint-down(sm) {
-                    font-size: 0.9rem;
-                }
-
-                @media (max-width: 414px) {
-                    font-size: .75rem;
-
-
-                }
-            }
-
-            // adjusting for mdbytes logo font
-            .logo-style {
-                color: $primary;
-                font-size: 1.8rem;
-
-                @media (max-width: 414px) {
-                    font-size: 1.2rem;
-                }
-            }
-
-            // adjusting for mdbytes name font
-            .name-style {
-                color: $secondary;
-                font-size: 1.8rem;
-
-                @media (max-width: 414px) {
-                    font-size: 1.2rem;
-                }
-            }
-
-            @include media-breakpoint-down(sm) {
-                margin-left: 1rem;
-            }
-        }
-
-        // "watch our video" button 
-        .btn-rounded {
-            display: block;
-            margin: 0 auto;
-            border: none;
-            background-color: rgba($white, 0.65);
-            box-shadow: 0 0 2rem rgba($white, 1);
-
-
-            &:hover {
-                box-shadow: 0 0 2rem rgba($secondary, 1);
-
-                a {
-                    background-color: $white;
-                    color: $primary;
-                }
-            }
-
-            @media (max-width: 992px) {
-                display: none;
-            }
-        }
-
-        // From here down covers the right (2nd) column on the 
+        // From here down covers the right (2nd) column on the
         // LandingPage component
         .video-box {
             position: relative;
+            box-shadow: 2rem 2rem 2rem rgba($black, 0.5);
+
+            @media only screen and (max-width: 992px) {
+                display: none !important;
+            }
 
             img {
                 display: block;
@@ -156,24 +126,9 @@
                 width: 70%;
                 padding: 1rem;
                 background-color: rgba($white, 0.2);
-                border-radius: 20%;
+                border-radius: 8px;
 
                 margin-top: 5rem;
-
-                @include media-breakpoint-down(lg) {
-                    width: 70%;
-                    margin-top: 4rem;
-                    margin-bottom: 6rem;
-                }
-
-                @include media-breakpoint-down(md) {
-                    margin-top: 4rem;
-                    width: 85%;
-                }
-
-                @media (max-width: 414px) {
-                    margin-top: 1rem;
-                }
             }
 
             button {
@@ -194,10 +149,6 @@
                     i {
                         font-size: 4rem;
                         color: rgba($secondary, 0.85);
-
-                        @include media-breakpoint-down(lg) {
-                            font-size: 3rem;
-                        }
                     }
                 }
 
@@ -212,11 +163,6 @@
                     border-radius: 50%;
                     animation: pulse-border 4s linear infinite;
 
-                    @include media-breakpoint-down(lg) {
-                        width: 3rem;
-                        height: 3rem;
-                    }
-
                     &--border-1 {
                         animation-delay: 1s;
                     }
@@ -229,4 +175,30 @@
         }
     }
 
+    .penguin-video-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        // "watch our video" button
+        .btn-rounded {
+            display: block;
+            margin: 0 auto;
+            border: none;
+            background-color: rgba($white, 0.65);
+            box-shadow: 0 0 2rem rgba($white, 1);
+
+            &:hover {
+                box-shadow: 0 0 2rem rgba($secondary, 1);
+
+                a {
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+        }
+    }
 }

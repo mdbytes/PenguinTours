@@ -186,8 +186,8 @@ class Footer extends Component {
                 />
 
                 <p>
-                  Connecting People <br />
-                  and Penguins
+                  <br />
+                  People and Penguins
                 </p>
               </div>
 
@@ -233,7 +233,16 @@ class Footer extends Component {
                       >
                         Pixabay
                       </a>{" "}
-                      or{" "}
+                      ,{" "}
+                      <a
+                        href="https://freesvg.org/pages/terms-and-conditions"
+                        alt="free svg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Free SVG
+                      </a>{" "}
+                      ,{" "}
                       <a
                         href="https://www.manypixels.co/gallery"
                         alt="ManyPixels"
@@ -241,8 +250,17 @@ class Footer extends Component {
                         rel="noopener noreferrer"
                       >
                         ManyPixels
-                      </a>{" "}
-                      licenses.
+                      </a>
+                      {" or "}
+                      <a
+                        href="https://www.pexels.com/license/"
+                        alt="Pexels"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Pexels
+                      </a>
+                      &nbsp;licenses.
                     </p>
                   </div>
                 </div>

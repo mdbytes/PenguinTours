@@ -9,6 +9,54 @@ body {
     @include backgroundImage;
 }
 
+p {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    text-shadow: 0.5rem 0.5rem 0.5rem rgba($black, 0.5);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 .attribution {
     text-align: center;
     font-size: 1rem;
@@ -24,31 +72,44 @@ body {
     color: #ff6a00;
 }
 
+.logo-font {
+    @include logoFontFamily;
+}
+
 .display-2 {
+    @include headingFont;
     margin: 1rem 0;
-    text-transform: capitalize;
-    font-family: "Poppins", sans-serif;
+    color: $primary;
+    text-shadow: 0.5rem 0.5rem 0.5rem rgba($black, 0.6);
+    font-size: 4.25rem;
+    font-weight: 600;
 
     &--intro {
+        text-shadow: 0.2rem 0.2rem 0.2rem rgba($black, 1);
+        font-size: 1.75rem;
+        margin-top: 3rem;
         display: inline-block;
         font-weight: 700;
         color: $white;
-        font-family: "Poppins", sans-serif;
+        text-align: center;
+        @include headingFont;
     }
 
     &--description {
-        font-size: 1rem;
+        font-size: 2rem;
         display: block;
         color: $white;
-        margin: 1.2rem 0;
+        margin: 2rem 0;
         text-transform: none;
+        @include headingFont;
+        text-shadow: 0.2rem 0.2rem 0.2rem rgba($black, 1);
 
         .logo-style {
             font-family: "MuseoModerno", cursive;
             font-size: 1.75rem;
             font-weight: 800;
             letter-spacing: -0.1em;
-            color: $primary;
+            color: $secondary;
         }
 
         .name-style {
@@ -65,6 +126,11 @@ body {
             display: inline-block;
         }
     }
+}
+
+.standard-image {
+    border-radius: 8px;
+    box-shadow: 1rem 1rem 1rem rgba($black, 0.5);
 }
 
 .gradient {
@@ -92,7 +158,11 @@ body {
 }
 
 .display-3 {
-    font-family: "Poppins", sans-serif;
+    @include headingFont;
+    color: $primary;
+    text-shadow: 0.5rem 0.5rem 0.5rem rgba($black, 0.4);
+    font-size: 3rem;
+    font-weight: 500;
 
     img {
         padding-left: 1rem;
@@ -115,6 +185,26 @@ body {
             font-size: 2.5rem;
         }
     }
+}
+
+.heading-line::after,
+.heading-line::before {
+    background-color: $primary;
+}
+
+.lead {
+    color: $primary;
+}
+
+.lh-lg {
+    color: $primary;
+}
+
+.text-box {
+    padding: 1rem;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 1rem 1rem 1rem rgba($black, 0.5);
 }
 
 .border-right {

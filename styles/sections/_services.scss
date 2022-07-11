@@ -13,21 +13,13 @@
 @use "../components/mixins";
 
 .services {
-    background: linear-gradient(rgba($white, 0) 0%,
-            rgba($white, 0.2) 20%,
-            rgba($white, 0.4) 40%,
-            rgba($white, 0.6) 60%,
-            rgba($white, 0.8) 80%,
-            rgba($white, 1) 100%);
+    @include pageBackground;
 
     position: relative;
     padding: 1rem 0;
     padding-top: 15vh;
     padding-bottom: 3rem;
 
-    .display-3 {
-        color: $white;
-    }
 
     #services-intro-overview {
         .service-items {
@@ -45,9 +37,17 @@
 
         .services-overview {
             border-radius: 8px;
-            color: $white;
+            color: $black;
             font-size: 1.2rem;
             line-height: 1.7rem;
+            height: 100%;
+
+            .text-box {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         @include media-breakpoint-down(md) {
@@ -69,9 +69,8 @@
         padding: 3rem 1.5rem 3rem 1.5rem;
 
         background-color: rgba($white, 0.8);
-        border: 1px solid $primary;
         border-radius: 8px;
-        box-shadow: 0px 0px 3.5rem $primary;
+        box-shadow: 0px 0px 3.5rem rgba($black, 0.5);
     }
 
 
@@ -130,6 +129,8 @@
 
                 span {
                     background-color: rgba($white, 0.1);
+                    border: none;
+                    box-shadow: 0 0 2rem $primary;
 
                     i {
                         font-size: 2rem !important;

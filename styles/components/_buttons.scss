@@ -10,12 +10,13 @@
     padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
     font-weight: 700;
     margin: 0;
-    border: 0.1rem solid rgba($white, 0.6);
+    margin-top: 2rem;
     background-color: $white;
+    box-shadow: 0 0 2rem rgba($black, .5);
 
     span {
         position: absolute;
-        background-color: $primary;
+        background-color: $secondary;
         width: 2.5rem;
         height: 2.5rem;
         top: 50%;
@@ -31,7 +32,11 @@
             font-size: 1rem;
             line-height: 2.5rem;
         }
+
+        transition: all 1s;
     }
+
+    transition: all 1s;
 
     &:hover {
         @include gradient;

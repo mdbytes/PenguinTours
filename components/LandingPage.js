@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import Seo from "./layout/Seo";
 import Script from "next/script";
 import Image from "next/image";
+import { FaAnchor } from "react-icons/fa";
+import Photo from "./utilities/Photo";
+import penguinSvg from "./images/pinguino.svg";
 
 const videoImage = "/images/landing-page/video-image-small.jpeg";
-const nameLogo = "/images/landing-page/name-image.png";
-const tagLine = "/images/landing-page/tagline.png";
 
 const LandingPage = () => {
   const [lightbox, setLightbox] = useState(null);
@@ -57,47 +58,25 @@ const LandingPage = () => {
             <h1
               className="display-2"
               style={{
+                color: "#fff",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                flexDirection: "column",
+                flexDirection: "row",
               }}
             >
-              <span>
-                <Image
-                  src={nameLogo}
-                  alt="name logo"
-                  objectFit="contain"
-                  width={600}
-                  height={100}
-                />
-              </span>
-              <br />
+              Penguin Tours <i class="fa-solid fa-ship"></i>
             </h1>
-            <div id="intro">
-              <span className="display-2--description lh-base">
-                <div
-                  id="tagline"
-                  style={{ display: "block", margin: "0 auto" }}
-                >
-                  <Image src={tagLine} alt="tag line" width={500} height={75} />
-                </div>
-                <br />
-                <br />A site demo by{" "}
-                <a href="https://mdbytes.com">
-                  <span className="name-style">
-                    <span className="logo-style">md </span>Bytes
-                  </span>
-                </a>
-              </span>
 
-              <button type="button" className="rounded-pill btn-rounded">
-                Penguin Video
-                <span className="glightbox">
-                  <i className="bi bi-play-fill"></i>
+            <span className="display-2--intro">Taking people to penguins</span>
+            <span className="display-2--description">
+              <br />A site demo by{" "}
+              <a href="https://mdbytes.com">
+                <span className="name-style">
+                  <span className="logo-style">md </span>Bytes
                 </span>
-              </button>
-            </div>
+              </a>
+            </span>
           </div>
 
           <div className="col-lg-6 intros">
@@ -128,6 +107,18 @@ const LandingPage = () => {
               </button>
             </div>
           </div>
+          <div className="col-lg-6 penguin-video-button">
+            <button
+              type="button"
+              className="glightbox rounded-pill btn-rounded"
+            >
+              Penguin Video
+              <span>
+                <i className="bi bi-play-fill"></i>
+              </span>
+            </button>
+          </div>
+          <div className="col-lg-6"></div>
         </div>
       </div>
       <Script src="https://cdn.jsdelivr.net/npm/glightbox-ssr@3.0.8/dist/js/glightbox.min.js" />

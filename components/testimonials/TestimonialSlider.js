@@ -23,7 +23,11 @@ class TestimonialSlider extends Component {
         >
           <div className="carousel-inner">
             {testimonialDetail.map((obj) => (
-              <div className="carousel-item" key={obj.key}>
+              <div
+                className="carousel-item"
+                key={obj.key}
+                data-bs-interval="5000"
+              >
                 {testimonialSlide(obj)}
               </div>
             ))}
