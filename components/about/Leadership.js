@@ -39,7 +39,7 @@ const Leadership = () => {
           <div className="row">
             <h4>Milestones</h4>
           </div>
-          <table class="table table-striped table-hover">
+          <table className="table table-striped table-hover">
             <thead>
               <tr>
                 <th scope="col">Year</th>
@@ -91,78 +91,78 @@ const Leadership = () => {
             <h4>Life of Arctic Navigator</h4>
           </div>
           <div
-            class="card col-sm-12 col-lg-6 col-xl-4"
+            className="card col-sm-12 col-lg-6 col-xl-4"
             style={{ float: "left" }}
           >
             <Photo src={photoOne} alt="leader" />
-            <div class="card-body">
-              <h5 class="card-title">Arctic Fox</h5>
-              <p class="card-text">
+            <div className="card-body">
+              <h5 className="card-title">Arctic Fox</h5>
+              <p className="card-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
                 ipsa quam, vel exercitationem
               </p>
             </div>
           </div>
           <div
-            class="card col-sm-12 col-lg-6 col-xl-4"
+            className="card col-sm-12 col-lg-6 col-xl-4"
             style={{ float: "left" }}
           >
             <Photo src={photoTwo} alt="leader" />
-            <div class="card-body">
-              <h5 class="card-title">Arctic Ports</h5>
-              <p class="card-text">
+            <div className="card-body">
+              <h5 className="card-title">Arctic Ports</h5>
+              <p className="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                 accusamus beatae facere!
               </p>
             </div>
           </div>
           <div
-            class="card col-sm-12 col-lg-6 col-xl-4"
+            className="card col-sm-12 col-lg-6 col-xl-4"
             style={{ float: "left" }}
           >
             <Photo src={photoThree} alt="leader" />
-            <div class="card-body">
-              <h5 class="card-title">Greenland Cruise</h5>
-              <p class="card-text">
+            <div className="card-body">
+              <h5 className="card-title">Greenland Cruise</h5>
+              <p className="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
             </div>
           </div>
           <div
-            class="card col-sm-12 col-lg-6 col-xl-4"
+            className="card col-sm-12 col-lg-6 col-xl-4"
             style={{ float: "left" }}
           >
             <Photo src={photoFour} alt="leader" />
-            <div class="card-body">
-              <h5 class="card-title">Arctic Hovercraft</h5>
-              <p class="card-text">
+            <div className="card-body">
+              <h5 className="card-title">Arctic Hovercraft</h5>
+              <p className="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
                 illum. Eveniet, reprehenderit?
               </p>
             </div>
           </div>
           <div
-            class="card col-sm-12 col-lg-6 col-xl-4"
+            className="card col-sm-12 col-lg-6 col-xl-4"
             style={{ float: "left" }}
           >
             <Photo src={photoFive} alt="leader" />
-            <div class="card-body">
-              <h5 class="card-title">Antarctic</h5>
-              <p class="card-text">
+            <div className="card-body">
+              <h5 className="card-title">Antarctic</h5>
+              <p className="card-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Veritatis ex tempora nemo?
               </p>
             </div>
           </div>
           <div
-            class="card col-sm-12 col-lg-6 col-xl-4"
+            className="card col-sm-12 col-lg-6 col-xl-4"
             style={{ float: "left" }}
           >
             <Photo src={photoSix} alt="leader" />
-            <div class="card-body">
-              <h5 class="card-title">Antarctic Marina</h5>
-              <p class="card-text">
+            <div className="card-body">
+              <h5 className="card-title">Antarctic Marina</h5>
+              <p className="card-text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
                 beatae blanditiis non!
               </p>

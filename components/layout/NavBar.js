@@ -94,10 +94,10 @@ const NavBar = () => {
                   </a>
                 </Link>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <Link href="/about">
                   <button
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     id="navbarDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -107,24 +107,24 @@ const NavBar = () => {
                     About
                   </button>
                 </Link>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <Link href="/about">
-                      <a class="dropdown-item">Overview</a>
+                      <a className="dropdown-item">Overview</a>
                     </Link>
                   </li>
 
                   <li>
                     <Link href="/about/team/ceo">
-                      <a class="dropdown-item">Leadership</a>
+                      <a className="dropdown-item">Leadership</a>
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <Link href="/services">
                   <button
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     id="servicesDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -134,15 +134,18 @@ const NavBar = () => {
                     Services
                   </button>
                 </Link>
-                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="servicesDropdown"
+                >
                   <li>
                     <Link href="/services">
-                      <a class="dropdown-item">Overview</a>
+                      <a className="dropdown-item">Overview</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/portfolio">
-                      <a class="dropdown-item">Tour Photo Gallery</a>
+                      <a className="dropdown-item">Tour Photo Gallery</a>
                     </Link>
                   </li>
                 </ul>

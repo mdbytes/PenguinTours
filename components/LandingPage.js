@@ -65,7 +65,7 @@ const LandingPage = () => {
                 flexDirection: "row",
               }}
             >
-              Penguin Tours <i class="fa-solid fa-ship"></i>
+              Penguin Tours <i className="fa-solid fa-ship"></i>
             </h1>
 
             <span className="display-2--intro">Taking people to penguins</span>
