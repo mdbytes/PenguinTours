@@ -79,7 +79,7 @@ const Leadership = () => {
               </tr>
             </tbody>
             <tfoot>
-              <th colspan="2">
+              <th colSpan="2">
                 <br />
                 <sup>*</sup>Fiction for illustration only.
               </th>
@@ -125,7 +125,7 @@ const Leadership = () => {
               <h5 className="card-title">Greenland Cruise</h5>
               <p className="card-text">
                 Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                the bulk of the card&apos;s content.
               </p>
             </div>
           </div>
